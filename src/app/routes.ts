@@ -7,6 +7,12 @@ import BeritaPage from './pages/BeritaPage';
 import MediaPage from './pages/MediaPage';
 import LEADPage from './pages/LEADPage';
 import PerpustakaanPage from './pages/PerpustakaanPage';
+import SejarahPage from './pages/SejarahPage';
+import VisiMisiPage from './pages/VisiMisiPage';
+import MarsPage from './pages/MarsPage';
+import PengakuanImanPage from './pages/PengakuanImanPage';
+import DewanDosenPage from './pages/DewanDosenPage';
+import YayasanPage from './pages/YayasanPage';
 import LoginPage from './pages/LoginPage';
 
 // CMS pages
@@ -33,6 +39,12 @@ export const router = createBrowserRouter([
       { path: 'media', Component: MediaPage },
       { path: 'lead', Component: LEADPage },
       { path: 'perpustakaan', Component: PerpustakaanPage },
+      { path: 'sejarah', Component: SejarahPage },
+      { path: 'visi-misi', Component: VisiMisiPage },
+      { path: 'mars', Component: MarsPage },
+      { path: 'pengakuan-iman', Component: PengakuanImanPage },
+      { path: 'dewan-dosen', Component: DewanDosenPage },
+      { path: 'yayasan', Component: YayasanPage },
       { path: 'login', Component: LoginPage },
     ],
   },

@@ -127,44 +127,44 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/sejarah" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Sejarah
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/visi-misi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Visi Misi
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/mars" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Mars STTB
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/pengakuan-iman" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Pengakuan Iman
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/dewan-dosen" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Dewan Dosen
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/yayasan" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Yayasan
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                       </ul>
