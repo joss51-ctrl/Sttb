@@ -105,8 +105,8 @@ export default function BeritaDetailPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Back Navigation */}
-      <section className="border-b border-gray-200 py-4">
+      {/* Back Navigation - Sticky below header */}
+      <div className="sticky top-0 bg-white border-b border-gray-200 py-4 z-40 shadow-sm">
         <div className="container mx-auto px-4">
           <Link
             to="/berita"
@@ -116,7 +116,7 @@ export default function BeritaDetailPage() {
             Kembali ke Berita
           </Link>
         </div>
-      </section>
+      </div>
 
       {/* Article Content - Narrow Layout (max 750px) */}
       <article className="py-16">

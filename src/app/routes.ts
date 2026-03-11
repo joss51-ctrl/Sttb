@@ -6,6 +6,7 @@ import KegiatanPage from './pages/KegiatanPage';
 import BeritaPage from './pages/BeritaPage';
 import BeritaDetailPage from './pages/BeritaDetailPage';
 import MediaPage from './pages/MediaPage';
+import MediaDetailPage from './pages/MediaDetailPage';
 import LEADPage from './pages/LEADPage';
 import PerpustakaanPage from './pages/PerpustakaanPage';
 import SejarahPage from './pages/SejarahPage';
@@ -64,8 +65,9 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: 'kegiatan', Component: KegiatanPage },
       { path: 'berita', Component: BeritaPage },
-      { path: 'berita/:id', Component: BeritaDetailPage },
+      { path: 'berita/:slug', Component: BeritaDetailPage },
       { path: 'media', Component: MediaPage },
+      { path: 'media/:slug', Component: MediaDetailPage },
       { path: 'lead', Component: LEADPage },
       { path: 'perpustakaan', Component: PerpustakaanPage },
       { path: 'sejarah', Component: SejarahPage },
