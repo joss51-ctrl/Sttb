@@ -28,6 +28,7 @@ import MagisterMinistriPelayananGerejawiPage from './pages/programs/MagisterMini
 // Admisi pages
 import JadwalAdmisiPage from './pages/JadwalAdmisiPage';
 import ProsedurAdmisiPage from './pages/ProsedurAdmisiPage';
+import InfoPersyaratanPage from './pages/InfoPersyaratanPage';
 
 // CMS pages
 import CMSDashboard from './pages/cms/Dashboard';
@@ -63,6 +64,7 @@ export const router = createBrowserRouter([
       // Admisi pages
       { path: 'jadwal-admisi', Component: JadwalAdmisiPage },
       { path: 'prosedur-admisi', Component: ProsedurAdmisiPage },
+      { path: 'info-persyaratan', Component: InfoPersyaratanPage },
       // Academic programs
       { path: 'programs/sarjana-teologi', Component: SarjanaTeologiPage },
       { path: 'programs/sarjana-pendidikan-kristen', Component: SarjanaPendidikanKristenPage },
