@@ -4,6 +4,7 @@ import { createBrowserRouter } from 'react-router';
 import HomePage from './pages/HomePage';
 import KegiatanPage from './pages/KegiatanPage';
 import BeritaPage from './pages/BeritaPage';
+import BeritaDetailPage from './pages/BeritaDetailPage';
 import MediaPage from './pages/MediaPage';
 import LEADPage from './pages/LEADPage';
 import PerpustakaanPage from './pages/PerpustakaanPage';
@@ -40,6 +41,7 @@ import DukungSTTBPage from './pages/DukungSTTBPage';
 import FasilitasPage from './pages/FasilitasPage';
 import PembinaanPage from './pages/PembinaanPage';
 import SenatPage from './pages/SenatPage';
+import KontakKamiPage from './pages/KontakKamiPage';
 
 // CMS pages
 import CMSDashboard from './pages/cms/Dashboard';
@@ -62,6 +64,7 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: 'kegiatan', Component: KegiatanPage },
       { path: 'berita', Component: BeritaPage },
+      { path: 'berita/:id', Component: BeritaDetailPage },
       { path: 'media', Component: MediaPage },
       { path: 'lead', Component: LEADPage },
       { path: 'perpustakaan', Component: PerpustakaanPage },
@@ -85,6 +88,7 @@ export const router = createBrowserRouter([
       { path: 'fasilitas', Component: FasilitasPage },
       { path: 'pembinaan', Component: PembinaanPage },
       { path: 'senat', Component: SenatPage },
+      { path: 'kontak-kami', Component: KontakKamiPage },
       // Academic programs
       { path: 'programs/sarjana-teologi', Component: SarjanaTeologiPage },
       { path: 'programs/sarjana-pendidikan-kristen', Component: SarjanaPendidikanKristenPage },

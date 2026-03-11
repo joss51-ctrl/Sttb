@@ -348,9 +348,9 @@ export default function PublicHeader() {
                   {/* Kontak Kami */}
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
-                      <a href="#" className="px-4 py-2 text-sm font-medium hover:text-blue-600">
+                      <Link to="/kontak-kami" className="px-4 py-2 text-sm font-medium hover:text-blue-600">
                         Kontak Kami
-                      </a>
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>
