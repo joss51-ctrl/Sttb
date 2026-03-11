@@ -29,6 +29,7 @@ import MagisterMinistriPelayananGerejawiPage from './pages/programs/MagisterMini
 import JadwalAdmisiPage from './pages/JadwalAdmisiPage';
 import ProsedurAdmisiPage from './pages/ProsedurAdmisiPage';
 import InfoPersyaratanPage from './pages/InfoPersyaratanPage';
+import FAQPage from './pages/FAQPage';
 
 // CMS pages
 import CMSDashboard from './pages/cms/Dashboard';
@@ -65,6 +66,7 @@ export const router = createBrowserRouter([
       { path: 'jadwal-admisi', Component: JadwalAdmisiPage },
       { path: 'prosedur-admisi', Component: ProsedurAdmisiPage },
       { path: 'info-persyaratan', Component: InfoPersyaratanPage },
+      { path: 'faq', Component: FAQPage },
       // Academic programs
       { path: 'programs/sarjana-teologi', Component: SarjanaTeologiPage },
       { path: 'programs/sarjana-pendidikan-kristen', Component: SarjanaPendidikanKristenPage },

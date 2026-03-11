@@ -276,9 +276,9 @@ export default function PublicHeader() {
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/faq" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               FAQ
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                       </ul>
