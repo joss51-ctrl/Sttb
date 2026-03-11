@@ -31,6 +31,16 @@ import ProsedurAdmisiPage from './pages/ProsedurAdmisiPage';
 import InfoPersyaratanPage from './pages/InfoPersyaratanPage';
 import FAQPage from './pages/FAQPage';
 
+// Keuangan pages
+import BiayaStudiPage from './pages/BiayaStudiPage';
+import BeasiswaPage from './pages/BeasiswaPage';
+import DukungSTTBPage from './pages/DukungSTTBPage';
+
+// Kehidupan Kampus pages
+import FasilitasPage from './pages/FasilitasPage';
+import PembinaanPage from './pages/PembinaanPage';
+import SenatPage from './pages/SenatPage';
+
 // CMS pages
 import CMSDashboard from './pages/cms/Dashboard';
 import CMSContentList from './pages/cms/ContentList';
@@ -67,6 +77,14 @@ export const router = createBrowserRouter([
       { path: 'prosedur-admisi', Component: ProsedurAdmisiPage },
       { path: 'info-persyaratan', Component: InfoPersyaratanPage },
       { path: 'faq', Component: FAQPage },
+      // Keuangan pages
+      { path: 'biaya-studi', Component: BiayaStudiPage },
+      { path: 'beasiswa', Component: BeasiswaPage },
+      { path: 'dukung-sttb', Component: DukungSTTBPage },
+      // Kehidupan Kampus pages
+      { path: 'fasilitas', Component: FasilitasPage },
+      { path: 'pembinaan', Component: PembinaanPage },
+      { path: 'senat', Component: SenatPage },
       // Academic programs
       { path: 'programs/sarjana-teologi', Component: SarjanaTeologiPage },
       { path: 'programs/sarjana-pendidikan-kristen', Component: SarjanaPendidikanKristenPage },

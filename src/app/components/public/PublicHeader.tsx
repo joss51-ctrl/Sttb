@@ -118,7 +118,7 @@ export default function PublicHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-2">
-              <NavigationMenu>
+              <NavigationMenu viewport={false}>
                 <NavigationMenuList>
                   {/* Tentang Kami */}
                   <NavigationMenuItem>
@@ -292,23 +292,23 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/biaya-studi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Biaya Studi
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/beasiswa" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Beasiswa
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/dukung-sttb" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Dukung STTB
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                       </ul>
@@ -322,23 +322,23 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/fasilitas" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Fasilitas
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/pembinaan" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Pembinaan
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/senat" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Senat
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                       </ul>
