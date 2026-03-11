@@ -178,58 +178,58 @@ export default function PublicHeader() {
                       <ul className="grid w-[320px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/sarjana-teologi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Sarjana Teologi
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/sarjana-pendidikan-kristen" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Sarjana Pendidikan Kristen
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/magister-teologi-urban" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Magister Teologi Pelayanan Pastoral Gereja Urban
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/magister-teologi-transformasi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Magister Teologi Transformasi Budaya & Masyarakat
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/magister-pendidikan-kristen" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Magister Pendidikan Kristen
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/magister-ministri-marketplace" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Magister Ministri Marketplace
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/magister-ministri-kepemimpinan" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Magister Ministri Kepemimpinan Pastoral
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/programs/magister-ministri-pelayanan-gerejawi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Magister Ministri Teologi Pelayanan Gerejawi
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                       </ul>
@@ -243,23 +243,28 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <a 
+                              href="https://sis.sttb.ac.id/pmb" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Pendaftaran Online
                             </a>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/jadwal-admisi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Jadwal Admisi
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link to="/prosedur-admisi" className="block p-2 rounded hover:bg-gray-100 text-sm">
                               Prosedur Admisi
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>

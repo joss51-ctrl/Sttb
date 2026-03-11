@@ -15,6 +15,20 @@ import DewanDosenPage from './pages/DewanDosenPage';
 import YayasanPage from './pages/YayasanPage';
 import LoginPage from './pages/LoginPage';
 
+// Academic program pages
+import SarjanaTeologiPage from './pages/programs/SarjanaTeologiPage';
+import SarjanaPendidikanKristenPage from './pages/programs/SarjanaPendidikanKristenPage';
+import MagisterTeologiUrbanPage from './pages/programs/MagisterTeologiUrbanPage';
+import MagisterTeologiTransformasiPage from './pages/programs/MagisterTeologiTransformasiPage';
+import MagisterPendidikanKristenPage from './pages/programs/MagisterPendidikanKristenPage';
+import MagisterMinistriMarketplacePage from './pages/programs/MagisterMinistriMarketplacePage';
+import MagisterMinistriKepemimpinanPage from './pages/programs/MagisterMinistriKepemimpinanPage';
+import MagisterMinistriPelayananGerejawiPage from './pages/programs/MagisterMinistriPelayananGerejawiPage';
+
+// Admisi pages
+import JadwalAdmisiPage from './pages/JadwalAdmisiPage';
+import ProsedurAdmisiPage from './pages/ProsedurAdmisiPage';
+
 // CMS pages
 import CMSDashboard from './pages/cms/Dashboard';
 import CMSContentList from './pages/cms/ContentList';
@@ -46,6 +60,18 @@ export const router = createBrowserRouter([
       { path: 'dewan-dosen', Component: DewanDosenPage },
       { path: 'yayasan', Component: YayasanPage },
       { path: 'login', Component: LoginPage },
+      // Admisi pages
+      { path: 'jadwal-admisi', Component: JadwalAdmisiPage },
+      { path: 'prosedur-admisi', Component: ProsedurAdmisiPage },
+      // Academic programs
+      { path: 'programs/sarjana-teologi', Component: SarjanaTeologiPage },
+      { path: 'programs/sarjana-pendidikan-kristen', Component: SarjanaPendidikanKristenPage },
+      { path: 'programs/magister-teologi-urban', Component: MagisterTeologiUrbanPage },
+      { path: 'programs/magister-teologi-transformasi', Component: MagisterTeologiTransformasiPage },
+      { path: 'programs/magister-pendidikan-kristen', Component: MagisterPendidikanKristenPage },
+      { path: 'programs/magister-ministri-marketplace', Component: MagisterMinistriMarketplacePage },
+      { path: 'programs/magister-ministri-kepemimpinan', Component: MagisterMinistriKepemimpinanPage },
+      { path: 'programs/magister-ministri-pelayanan-gerejawi', Component: MagisterMinistriPelayananGerejawiPage },
     ],
   },
   {
