@@ -1,0 +1,17 @@
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.csproj.AssemblyReference.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.AssemblyInfoInputs.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.AssemblyInfo.cs
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.csproj.CoreCompileInputs.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Commons.deps.json
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Commons.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Commons.pdb
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Contracts.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Entities.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Contracts.pdb
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\bin\Debug\net10.0\Entities.pdb
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.csproj.Up2Date
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\refint\Commons.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\Commons.pdb
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Commons\obj\Debug\net10.0\ref\Commons.dll
