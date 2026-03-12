@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
-import { Search, Menu, X, ChevronDown } from 'lucide-react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
+import { useState } from "react";
+import { Link } from "react-router";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,34 +10,26 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '../ui/navigation-menu';
+} from "../ui/navigation-menu";
 
-/**
- * PublicHeader - Main navigation header for the university website
- * Features:
- * - Top bar with quick links (Beranda, Kegiatan, Berita, Media, LEAD, Perpustakaan)
- * - Search functionality
- * - Main navigation with dropdown menus
- * - Sticky positioning for better UX
- */
 export default function PublicHeader() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const topMenuItems = [
-    { label: 'Beranda', href: '/' },
-    { label: 'Kegiatan', href: '/kegiatan' },
-    { label: 'Berita', href: '/berita' },
-    { label: 'Media', href: '/media' },
-    { label: 'LEAD', href: '/lead' },
-    { label: 'Perpustakaan', href: '/perpustakaan' },
+    { label: "Beranda", href: "/" },
+    { label: "Kegiatan", href: "/kegiatan" },
+    { label: "Berita", href: "/berita" },
+    { label: "Media", href: "/media" },
+    { label: "LEAD", href: "/lead" },
+    { label: "Perpustakaan", href: "/perpustakaan" },
   ];
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // In production, this would trigger a search
-    console.log('Searching for:', searchQuery);
+    console.log("Searching for:", searchQuery);
   };
 
   return (
@@ -45,57 +37,44 @@ export default function PublicHeader() {
       {/* Top Bar */}
       <div className="bg-blue-900 text-white">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-14">
-            <div className="flex items-center gap-6">
-              {topMenuItems.map((item) => (
+          <div className="flex items-center justify-between h-14 gap-4">
+            {/* BAGIAN KIRI: Menu Utama */}
+            <div className="flex items-center gap-5 flex-1">
+              {topMenuItems.slice(0, 6).map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="text-sm font-medium hover:text-blue-200 transition-colors hidden md:block"
+                  className="text-xs font-medium hover:text-blue-200 transition-colors hidden lg:block whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
 
-            <div className="flex items-center gap-4">
-              {/* Search Bar */}
-              {searchOpen ? (
-                <form onSubmit={handleSearch} className="flex items-center gap-2">
-                  <Input
-                    type="search"
-                    placeholder="Cari..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 h-8 bg-white text-gray-900"
-                    autoFocus
-                  />
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setSearchOpen(false)}
-                    className="text-white hover:text-blue-200"
-                  >
-                    <X className="w-4 h-4" />
-                  </Button>
-                </form>
-              ) : (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setSearchOpen(true)}
-                  className="text-white hover:text-blue-200"
-                >
-                  <Search className="w-4 h-4" />
-                </Button>
-              )}
+            {/* BAGIAN TENGAH: Search Bar (Persegi Panjang) */}
+            <div className="flex-[2] max-w-md">
+              <form onSubmit={handleSearch} className="relative group">
+                <Input
+                  type="search"
+                  placeholder="Cari informasi di STTB..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full h-9 bg-blue-800/50 border-blue-700 text-white placeholder:text-blue-300 focus:bg-white focus:text-gray-900 transition-all rounded-md"
+                />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-blue-300 group-focus-within:text-gray-500 pointer-events-none" />
+              </form>
+            </div>
 
-              <Link to="/login">
-                <Button variant="ghost" size="sm" className="text-white hover:text-blue-200">
-                  LOGIN
-                </Button>
-              </Link>
+            <div className="flex items-center gap-5 flex-1 justify-end">
+              <div className="flex items-center text-[10px] font-bold tracking-widest uppercase">
+                <button className="text-white hover:text-blue-200 transition-colors">
+                  Indonesia
+                </button>
+                <span className="mx-2 text-blue-700">|</span>
+                <button className="text-blue-400 hover:text-white transition-colors">
+                  English
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -105,21 +84,22 @@ export default function PublicHeader() {
       <div className="bg-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                S
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">STTB</h1>
-                <p className="text-xs text-gray-600">Sekolah Tinggi Teologi Bandung</p>
+            {/* Logo Section */}
+            <Link to="/" className="flex items-center gap-3 group">
+              {/* Container Logo */}
+              <div className="w-26 h-12 flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://sttb.ac.id/storage/2022/01/logo.png"
+                  alt="Logo STTB"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-2">
+            <nav className="hidden lg:flex items-center gap-2 justify-center flex-1">
               <NavigationMenu viewport={false}>
-                <NavigationMenuList>
+                <NavigationMenuList className="justify-center">
                   {/* Tentang Kami */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Tentang Kami</NavigationMenuTrigger>
@@ -127,42 +107,60 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/sejarah" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/sejarah"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Sejarah
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/visi-misi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/visi-misi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Visi Misi
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/mars" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/mars"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Mars STTB
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/pengakuan-iman" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/pengakuan-iman"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Pengakuan Iman
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/dewan-dosen" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/dewan-dosen"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Dewan Dosen
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/yayasan" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/yayasan"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Yayasan
                             </Link>
                           </NavigationMenuLink>
@@ -178,56 +176,80 @@ export default function PublicHeader() {
                       <ul className="grid w-[320px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/sarjana-teologi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/sarjana-teologi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Sarjana Teologi
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/sarjana-pendidikan-kristen" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/sarjana-pendidikan-kristen"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Sarjana Pendidikan Kristen
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/magister-teologi-urban" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/magister-teologi-urban"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Magister Teologi Pelayanan Pastoral Gereja Urban
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/magister-teologi-transformasi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/magister-teologi-transformasi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Magister Teologi Transformasi Budaya & Masyarakat
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/magister-pendidikan-kristen" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/magister-pendidikan-kristen"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Magister Pendidikan Kristen
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/magister-ministri-marketplace" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/magister-ministri-marketplace"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Magister Ministri Marketplace
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/magister-ministri-kepemimpinan" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/magister-ministri-kepemimpinan"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Magister Ministri Kepemimpinan Pastoral
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/programs/magister-ministri-pelayanan-gerejawi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/programs/magister-ministri-pelayanan-gerejawi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Magister Ministri Teologi Pelayanan Gerejawi
                             </Link>
                           </NavigationMenuLink>
@@ -243,9 +265,9 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a 
-                              href="https://sis.sttb.ac.id/pmb" 
-                              target="_blank" 
+                            <a
+                              href="https://sis.sttb.ac.id/pmb"
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="block p-2 rounded hover:bg-gray-100 text-sm"
                             >
@@ -255,28 +277,40 @@ export default function PublicHeader() {
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/jadwal-admisi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/jadwal-admisi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Jadwal Admisi
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/prosedur-admisi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/prosedur-admisi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Prosedur Admisi
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/info-persyaratan" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/info-persyaratan"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Info Persyaratan
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/faq" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/faq"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               FAQ
                             </Link>
                           </NavigationMenuLink>
@@ -292,21 +326,30 @@ export default function PublicHeader() {
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/biaya-studi" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/biaya-studi"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Biaya Studi
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/beasiswa" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/beasiswa"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Beasiswa
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/dukung-sttb" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/dukung-sttb"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Dukung STTB
                             </Link>
                           </NavigationMenuLink>
@@ -317,26 +360,37 @@ export default function PublicHeader() {
 
                   {/* Kehidupan Kampus */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Kehidupan Kampus</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>
+                      Kehidupan Kampus
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[200px] gap-2 p-4">
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/fasilitas" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/fasilitas"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Fasilitas
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/pembinaan" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/pembinaan"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Pembinaan
                             </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link to="/senat" className="block p-2 rounded hover:bg-gray-100 text-sm">
+                            <Link
+                              to="/senat"
+                              className="block p-2 rounded hover:bg-gray-100 text-sm"
+                            >
                               Senat
                             </Link>
                           </NavigationMenuLink>
@@ -344,18 +398,29 @@ export default function PublicHeader() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-
-                  {/* Kontak Kami */}
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link to="/kontak-kami" className="px-4 py-2 text-sm font-medium hover:text-blue-600">
-                        Kontak Kami
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
             </nav>
+
+            {/* 3. KANAN: Action Buttons (Kontak Kami & Login) */}
+            <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+              {/* Tombol Kontak Kami (Sekarang jadi Button Utama) */}
+              <Link to="/kontak-kami">
+                <Button
+                  variant="ghost"
+                  className="text-sm font-semibold text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-all"
+                >
+                  Kontak Kami
+                </Button>
+              </Link>
+
+              {/* Tombol Login (Dibuat lebih menonjol) */}
+              <Link to="/login">
+                <Button className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md shadow-sm transition-all active:scale-95">
+                  LOGIN
+                </Button>
+              </Link>
+            </div>
 
             {/* Mobile Menu Button */}
             <Button
@@ -364,7 +429,11 @@ export default function PublicHeader() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </Button>
           </div>
         </div>

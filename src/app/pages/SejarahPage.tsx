@@ -14,11 +14,11 @@
 
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
-import logoImage from 'figma:asset/3308a592eb8e599b899462fa3ba1c1cb2cc81be0.png';
-import apiIcon from 'figma:asset/2b9773aa375b6705fc69f0494c26aab9ef0eb9c4.png';
-import salibIcon from 'figma:asset/26b21d36b14bc27629e0dbdb42d994a19a8c7b44.png';
-import alkitabIcon from 'figma:asset/958fed8541ee2bd947354eb0172f818fa1eae33c.png';
-import tongkatIcon from 'figma:asset/ea920ee6f637ce7a5c5bd5d1a20804989706472c.png';
+// import logoImage from 'figma:asset/3308a592eb8e599b899462fa3ba1c1cb2cc81be0.png';
+// import apiIcon from 'figma:asset/2b9773aa375b6705fc69f0494c26aab9ef0eb9c4.png';
+// import salibIcon from 'figma:asset/26b21d36b14bc27629e0dbdb42d994a19a8c7b44.png';
+// import alkitabIcon from 'figma:asset/958fed8541ee2bd947354eb0172f818fa1eae33c.png';
+// import tongkatIcon from 'figma:asset/ea920ee6f637ce7a5c5bd5d1a20804989706472c.png';
 
 interface TimelineSection {
   year: string;
