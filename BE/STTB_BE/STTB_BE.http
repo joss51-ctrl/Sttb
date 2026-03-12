@@ -1,0 +1,6 @@
+@STTB_BE_HostAddress = http://localhost:5080
+
+GET {{STTB_BE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

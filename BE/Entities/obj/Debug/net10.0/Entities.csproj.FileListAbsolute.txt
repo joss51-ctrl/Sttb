@@ -1,0 +1,14 @@
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.csproj.AssemblyReference.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.AssemblyInfoInputs.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.AssemblyInfo.cs
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\bin\Debug\net10.0\Entities.deps.json
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\bin\Debug\net10.0\Entities.runtimeconfig.json
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\bin\Debug\net10.0\Entities.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\bin\Debug\net10.0\Entities.pdb
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\refint\Entities.dll
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.pdb
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\Entities.genruntimeconfig.cache
+C:\Users\satri\Downloads\asas\Project VS\STTB_BE\Entities\obj\Debug\net10.0\ref\Entities.dll
