@@ -12,35 +12,35 @@ const Testimonials = () => {
   const reviews = [
     {
       name: "Alfed Juan",
-      role: "S.Pd.2014",
+      role: "S.Pd. 2014",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
       text: "Belajar di STTB memberikan saya fondasi teologis yang kuat dan karakter pelayanan yang benar-benar transformatif bagi masyarakat.",
     },
     {
       name: "Siska Amelia",
-      role: "S.Td.2015",
+      role: "S.Td. 2015",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
       text: "Kurikulum yang relevan dan lingkungan kampus yang inklusif membuat masa studi saya menjadi perjalanan pertumbuhan iman yang tak terlupakan.",
     },
     {
       name: "Budi Santoso",
-      role: "M.Th.2015",
+      role: "M.Th. 2015",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
       text: "Fasilitas perpustakaan dan dukungan dewan dosen sangat membantu saya dalam menyelesaikan riset teologi urban yang sedang saya kerjakan.",
     },
     {
       name: "Dewi Lestari",
-      role: "M.Pd.2016",
+      role: "M.Pd. 2016",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop",
       text: "STTB bukan sekadar tempat kuliah, tapi komunitas yang membentuk visi pelayanan saya untuk menjadi berkat bagi bangsa.",
     },
     {
       name: "Andi Pratama",
-      role: "M.Th.2017",
+      role: "M.Th. 2017",
       image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
       text: "Pengalaman belajar di STTB membuka wawasan teologi saya dan memperkuat panggilan pelayanan saya di tengah masyarakat.",
@@ -48,15 +48,19 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">
             Apa Kata Mereka?
           </h2>
-          <div className="w-20 h-1.5 bg-yellow-400 mx-auto rounded-full"></div>
-          <p className="mt-6 text-gray-500 max-w-xl mx-auto italic">
+          <div className="flex items-center justify-center gap-2">
+            <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
+            <span className="flex-shrink text-yellow-500">✦</span>{" "}
+            <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-gray-500 max-w-xl mx-auto italic">
             "Pengalaman nyata dari mereka yang telah menjadi bagian dari
             keluarga besar STTB."
           </p>
@@ -94,7 +98,7 @@ const Testimonials = () => {
                       <h4 className="font-bold text-gray-900 text-lg">
                         {item.name}
                       </h4>
-                      <p className="text-blue-700 text-xs font-bold uppercase tracking-widest mt-1">
+                      <p className="text-blue-900 text-xs font-bold uppercase tracking-widest mt-1">
                         {item.role}
                       </p>
                     </div>

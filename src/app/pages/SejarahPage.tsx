@@ -359,3 +359,8 @@ export default function SejarahPage() {
     </div>
   );
 }
+
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="w-12 h-1.5 bg-yellow-400 rounded-full"></div>
+                    <div className="w-2 h-1.5 bg-yellow-400 rounded-full"></div>
+                  </div>
