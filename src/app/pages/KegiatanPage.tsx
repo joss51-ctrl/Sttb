@@ -4,6 +4,7 @@
  */
 
 import { useState, useRef, useEffect } from 'react';
+import axios from 'axios';
 import { Search, ChevronLeft, ChevronRight, Calendar as CalendarIcon, Clock, User, MapPin } from 'lucide-react';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
@@ -30,119 +31,7 @@ interface Event {
   status: 'ongoing' | 'expired';
 }
 
-// Mock events data
-const mockEvents: Event[] = [
-  {
-    id: '1',
-    title: 'Orientasi Mahasiswa Baru',
-    date: new Date(2026, 2, 15),
-    time: '08:00 - 16:00',
-    organizer: 'Bagian Akademik',
-    category: 'Akademik',
-    location: 'Auditorium STTB',
-    description: 'Pengenalan kehidupan kampus untuk mahasiswa baru',
-    status: 'expired',
-  },
-  {
-    id: '2',
-    title: 'Seminar Teologi Kontemporer',
-    date: new Date(2026, 2, 20),
-    time: '13:00 - 15:00',
-    organizer: 'Dr. Paulus Gunawan',
-    category: 'Akademik',
-    location: 'Ruang Seminar',
-    description: 'Diskusi mendalam tentang isu-isu teologi masa kini',
-    status: 'ongoing',
-  },
-  {
-    id: '3',
-    title: 'Rapat Senat Mahasiswa',
-    date: new Date(2026, 2, 22),
-    time: '14:00 - 16:00',
-    organizer: 'Senat Mahasiswa',
-    category: 'Senat',
-    location: 'Ruang Senat',
-    description: 'Rapat koordinasi senat mahasiswa periode Maret',
-    status: 'ongoing',
-  },
-  {
-    id: '4',
-    title: 'Retreat Rohani Dosen',
-    date: new Date(2026, 2, 25),
-    time: '09:00 - 17:00',
-    organizer: 'Tim Pembinaan',
-    category: 'Pembinaan',
-    location: 'Ciater, Subang',
-    description: 'Pembinaan rohani dan fellowship dosen',
-    status: 'ongoing',
-  },
-  {
-    id: '5',
-    title: 'Workshop Hermeneutika',
-    date: new Date(2026, 3, 5),
-    time: '10:00 - 15:00',
-    organizer: 'Dr. Elisabeth Chen',
-    category: 'Akademik',
-    location: 'Lab Komputer',
-    description: 'Pelatihan metode penafsiran Alkitab',
-    status: 'ongoing',
-  },
-  {
-    id: '6',
-    title: 'Bakti Sosial Mahasiswa',
-    date: new Date(2026, 3, 10),
-    time: '07:00 - 14:00',
-    organizer: 'Senat Mahasiswa',
-    category: 'Senat',
-    location: 'Desa Cibiru',
-    description: 'Kegiatan pengabdian masyarakat',
-    status: 'ongoing',
-  },
-  {
-    id: '7',
-    title: 'Ibadah Paskah Kampus',
-    date: new Date(2026, 3, 12),
-    time: '10:00 - 12:00',
-    organizer: 'Tim Pembinaan',
-    category: 'Pembinaan',
-    location: 'Kapel STTB',
-    description: 'Perayaan Paskah bersama sivitas akademika',
-    status: 'ongoing',
-  },
-  {
-    id: '8',
-    title: 'Ujian Tengah Semester',
-    date: new Date(2026, 3, 15),
-    time: '08:00 - 12:00',
-    organizer: 'Bagian Akademik',
-    category: 'Akademik',
-    location: 'Ruang Kuliah',
-    description: 'UTS untuk semua program studi',
-    status: 'ongoing',
-  },
-  {
-    id: '9',
-    title: 'Gathering Alumni',
-    date: new Date(2026, 3, 18),
-    time: '17:00 - 21:00',
-    organizer: 'Humas & Alumni',
-    category: 'Umum',
-    location: 'Gedung Serba Guna',
-    description: 'Pertemuan alumni dan networking',
-    status: 'ongoing',
-  },
-  {
-    id: '10',
-    title: 'Konferensi Nasional Teologi',
-    date: new Date(2026, 3, 25),
-    time: '08:00 - 17:00',
-    organizer: 'STTB',
-    category: 'Akademik',
-    location: 'Auditorium STTB',
-    description: 'Konferensi teologi tingkat nasional',
-    status: 'ongoing',
-  },
-];
+// Remove mock data as we are using mockApi
 
 // Category colors
 const categoryColors = {
@@ -159,24 +48,87 @@ export default function KegiatanPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [organizerFilter, setOrganizerFilter] = useState<string>('all');
-  
+
+  // API State
+  const [events, setEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch events from real backend API
+  useEffect(() => {
+    let isMounted = true;
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        // Note: The backend route specifies "api/kegiatan/v1[controller]", 
+        // which physically maps to "api/kegiatan/v1Kegiatan" without a slash.
+        // Adjust this URL if you update the route in `KegiatanController.cs` to "v1/[controller]".
+        const response = await axios.get('http://localhost:5080/api/kegiatan/v1Kegiatan/list');
+        const data = response.data;
+
+        if (!isMounted) return;
+
+        // Filter and map backend data to frontend Event type
+        const backendEvents = (data.items || []).map((item: any) => {
+          const eventDate = new Date(item.startDateTime);
+          const endDate = new Date(item.endDateTime);
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+
+          // Format time (HH:mm - HH:mm)
+          const formatTime = (date: Date) => {
+            return date.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+          };
+          const timeString = `${formatTime(eventDate)} - ${formatTime(endDate)}`;
+
+          let eventStatus = 'ongoing';
+          if (item.status && item.status.toLowerCase() === 'expired') {
+            eventStatus = 'expired';
+          } else if (endDate < today) {
+            eventStatus = 'expired';
+          }
+
+          return {
+            id: item.id,
+            title: item.title,
+            date: eventDate,
+            time: timeString,
+            organizer: item.organizer || 'TBA',
+            category: item.category || 'Umum',
+            location: 'TBA', // Backend DTO doesn't include Location yet
+            description: '', // Backend DTO doesn't include Description yet
+            status: eventStatus as 'ongoing' | 'expired'
+          };
+        });
+
+        setEvents(backendEvents);
+      } catch (error) {
+        console.error('Failed to fetch events from backend:', error);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+
+    fetchEvents();
+    return () => { isMounted = false; };
+  }, []);
+
   // Refs for scrolling
   const eventRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Get unique organizers
-  const organizers = Array.from(new Set(mockEvents.map(e => e.organizer)));
+  const organizers = Array.from(new Set(events.map(e => e.organizer)));
 
   // Filter events
-  const filteredEvents = mockEvents.filter(event => {
+  const filteredEvents = events.filter(event => {
     const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchQuery.toLowerCase());
+      event.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = categoryFilter === 'all' || event.category === categoryFilter;
     const matchesOrganizer = organizerFilter === 'all' || event.organizer === organizerFilter;
-    const matchesDate = !selectedDate || 
-                       (event.date.getDate() === selectedDate.getDate() &&
-                        event.date.getMonth() === selectedDate.getMonth() &&
-                        event.date.getFullYear() === selectedDate.getFullYear());
-    
+    const matchesDate = !selectedDate ||
+      (event.date.getDate() === selectedDate.getDate() &&
+        event.date.getMonth() === selectedDate.getMonth() &&
+        event.date.getFullYear() === selectedDate.getFullYear());
+
     return matchesSearch && matchesCategory && matchesOrganizer && matchesDate;
   });
 
@@ -200,7 +152,7 @@ export default function KegiatanPage() {
   };
 
   const hasEventOnDate = (date: Date, day: number) => {
-    return mockEvents.some(event => 
+    return events.some(event =>
       event.date.getDate() === day &&
       event.date.getMonth() === date.getMonth() &&
       event.date.getFullYear() === date.getFullYear()
@@ -210,7 +162,7 @@ export default function KegiatanPage() {
   const handleDateClick = (day: number) => {
     const clickedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
     setSelectedDate(clickedDate);
-    
+
     // Find first event on this date and scroll to it
     const dateStr = clickedDate.toDateString();
     if (eventRefs.current[dateStr]) {
@@ -229,15 +181,15 @@ export default function KegiatanPage() {
   const isToday = (day: number) => {
     const today = new Date();
     return day === today.getDate() &&
-           currentDate.getMonth() === today.getMonth() &&
-           currentDate.getFullYear() === today.getFullYear();
+      currentDate.getMonth() === today.getMonth() &&
+      currentDate.getFullYear() === today.getFullYear();
   };
 
   const isSelected = (day: number) => {
     if (!selectedDate) return false;
     return day === selectedDate.getDate() &&
-           currentDate.getMonth() === selectedDate.getMonth() &&
-           currentDate.getFullYear() === selectedDate.getFullYear();
+      currentDate.getMonth() === selectedDate.getMonth() &&
+      currentDate.getFullYear() === selectedDate.getFullYear();
   };
 
   // Render calendar days
@@ -421,7 +373,11 @@ export default function KegiatanPage() {
 
           {/* Right Main Area - Event List */}
           <main className="flex-1 min-w-0">
-            {filteredEvents.length === 0 ? (
+            {loading ? (
+              <div className="text-center py-16">
+                <p className="text-gray-500 text-lg">Memuat kegiatan...</p>
+              </div>
+            ) : filteredEvents.length === 0 ? (
               <div className="text-center py-16">
                 <CalendarIcon className="w-16 h-16 mx-auto text-gray-300 mb-4" />
                 <p className="text-gray-500 text-lg">Tidak ada kegiatan yang sesuai filter</p>

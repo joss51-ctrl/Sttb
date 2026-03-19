@@ -31,6 +31,8 @@ public class UpdateKegiatanRequestHandler
         kegiatan.Category = request.Category;
         kegiatan.IsFeatured = request.IsFeatured;
         kegiatan.Status = request.Status;
+        kegiatan.Description = request.Description;
+        kegiatan.Location = request.Location;
 
         await _db.SaveChangesAsync(cancellationToken);
 

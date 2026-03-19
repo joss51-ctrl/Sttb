@@ -34,7 +34,9 @@ public class GetKegiatanListRequestHandler
                 Organizer = x.Organizer,
                 Category = x.Category,
                 IsFeatured = x.IsFeatured,
-                Status = x.Status
+                Status = x.Status,
+                Location = x.Location,
+                Description = x.Description
             }).ToList()
         };
     }
