@@ -57,6 +57,10 @@ export default function ContentEditor() {
               excerpt: content.excerpt,
               category: content.category,
               tags: content.tags,
+              eventDate: content.eventDate,
+              eventTime: content.eventTime,
+              location: content.location,
+              organizer: content.organizer,
             });
           }
         } catch (error) {
@@ -200,6 +204,7 @@ export default function ContentEditor() {
                     <SelectItem value="banner">Banner</SelectItem>
                     <SelectItem value="announcement">Announcement</SelectItem>
                     <SelectItem value="faq">FAQ</SelectItem>
+                    <SelectItem value="event">Event</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -243,6 +248,50 @@ export default function ContentEditor() {
                 placeholder="tag1, tag2, tag3"
               />
             </div>
+
+            {formData.contentType === 'event' && (
+              <div className="pt-4 border-t border-gray-100">
+                <h4 className="text-sm font-medium text-gray-900 mb-4">Event Details</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="eventDate">Event Date</Label>
+                    <Input
+                      id="eventDate"
+                      type="date"
+                      value={formData.eventDate || ''}
+                      onChange={(e) => updateField('eventDate', e.target.value)}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="eventTime">Event Time</Label>
+                    <Input
+                      id="eventTime"
+                      placeholder="e.g., 08:00 - 16:00"
+                      value={formData.eventTime || ''}
+                      onChange={(e) => updateField('eventTime', e.target.value)}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="location">Location</Label>
+                    <Input
+                      id="location"
+                      placeholder="Event Location"
+                      value={formData.location || ''}
+                      onChange={(e) => updateField('location', e.target.value)}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="organizer">Organizer</Label>
+                    <Input
+                      id="organizer"
+                      placeholder="Event Organizer"
+                      value={formData.organizer || ''}
+                      onChange={(e) => updateField('organizer', e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
 

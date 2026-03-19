@@ -35,7 +35,9 @@ public class GetKegiatanRequestHandler
             Organizer = kegiatan.Organizer,
             Category = kegiatan.Category,
             IsFeatured = kegiatan.IsFeatured,
-            Status = kegiatan.Status
+            Status = kegiatan.Status,
+            Description = kegiatan.Description,
+            Location = kegiatan.Location
         };
     }
 }

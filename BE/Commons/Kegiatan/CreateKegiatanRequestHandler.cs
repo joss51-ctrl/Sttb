@@ -28,7 +28,9 @@ public class CreateKegiatanRequestHandler
             Organizer = request.Organizer,
             Category = request.Category,
             IsFeatured = request.IsFeatured,
-            Status = request.Status
+            Status = request.Status,
+            Location = request.Location,
+            Description = request.Description
         };
 
         _db.Kegiatans.Add(kegiatan);

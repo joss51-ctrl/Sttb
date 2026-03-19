@@ -17,4 +17,6 @@ public class CreateKegiatanRequest : IRequest<Guid>
     public bool IsFeatured { get; set; }
 
     public string Status { get; set; } = string.Empty;
+    public string Description { get; set; }
+    public string Location { get; set; }
 }

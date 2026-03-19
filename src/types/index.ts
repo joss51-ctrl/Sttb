@@ -13,7 +13,7 @@ export interface ContentItem {
   id: string;
   title: string;
   slug: string;
-  contentType: 'page' | 'article' | 'banner' | 'announcement' | 'faq';
+  contentType: 'page' | 'article' | 'banner' | 'announcement' | 'faq' | 'event';
   status: 'Draft' | 'In Review' | 'Approved' | 'Published' | 'Scheduled' | 'Rejected';
   author: User;
   content: string;
@@ -25,6 +25,12 @@ export interface ContentItem {
   createdAt: string;
   category?: string;
   tags?: string[];
+  
+  // Event specific fields
+  eventDate?: string;
+  eventTime?: string;
+  location?: string;
+  organizer?: string;
 }
 
 export interface MediaItem {
@@ -66,4 +72,10 @@ export interface CMSFormData {
   category?: string;
   tags?: string[];
   scheduledAt?: string;
+  
+  // Event specific fields
+  eventDate?: string;
+  eventTime?: string;
+  location?: string;
+  organizer?: string;
 }
