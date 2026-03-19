@@ -17,11 +17,16 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
+
 import { mockApi } from "../../utils/mockApi";
 import type { ContentItem } from "../../types";
 import BangunanSTTB from "@/assets/BangunanSTTB.webp";
 import DosenPengajar from "@/assets/TentangKami.webp";
 import Testimonials from "../components/public/Testimonials";
+import ProgramStudiHomePage from "../components/public/ProgramStudiHomePage";
+import KehidupanKampusHomePage from "../components/public/KehidupanKampusHomePage";
+import BeritaHomePage from "../components/public/BeritaHomePage";
+import HeroHomePage from "../components/public/HeroHomePage";
 
 export default function HomePage() {
   const [latestNews, setLatestNews] = useState<ContentItem[]>([]);
@@ -52,43 +57,14 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative w-full text-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={BangunanSTTB}
-            alt="Kampus STTB"
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-blue-900/70 mix-blend-multiply"></div>
-        </div>
 
-        <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight text-left">
-              Selamat Datang di Sekolah Tinggi Teologi Bandung
-            </h1>
-            <p className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed font-medium text-left">
-              Membentuk pemimpin rohani yang berkualitas untuk melayani gereja
-              dan masyarakat secara transformatif.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-4 mt-8">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-bold transition-all shadow-lg active:scale-95">
-              Daftar Sekarang
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-md font-bold border border-white/30 transition-all">
-              Lihat Program Studi
-            </button>
-          </div>
-        </div>
-      </section>
+      <HeroHomePage />
 
       {/* Stats Section / Tentang STTB */}
-      <section className="py-20  text-">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           {/* --- Section: Penjelasan Singkat (Split Layout) --- */}
-          <section className="bg-white pt-20 pb-32 px-4">
+          <section className="pt-20 pb-32 px-4">
             <div className="container mx-auto max-w-6xl">
               <div className="flex flex-col md:flex-row items-center gap-12">
                 {/* KIRI: Teks Penjelasan */}
@@ -172,7 +148,7 @@ export default function HomePage() {
           </section>
 
           {/* --- Section Visi Kami (Clean White Edition) --- */}
-          <section className="bg-white py-24 px-4">
+          <section className="bg-slate-40 py-24 px-4">
             <div className="container mx-auto max-w-6xl">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 text-blue-900">
@@ -247,7 +223,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="bg-white py-10 px-4">
+          <section className="bg-white px-4">
             <div className="container mx-auto max-w-5xl">
               <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center justify-center">
                 <div className="md:w-1/3 text-center md:text-left">
@@ -271,7 +247,7 @@ export default function HomePage() {
                     "Mengembangkan tim dosen, struktur organisasi dan keuangan, serta kemitraan untuk mendukung pencapaian visi STTB.",
                   ].map((misi, index) => (
                     <div key={index} className="flex gap-8 items-center group">
-                      <span className="text-6xl font-black text-blue-100 group-hover:text-blue-900 transition-colors duration-300 min-w-[80px]">
+                      <span className="text-6xl font-black text-blue-100 group-hover:text-blue-700 transition-colors duration-300 min-w-[80px]">
                         0{index + 1}
                       </span>
                       <div>
@@ -288,130 +264,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative h-[70vh] w-full overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        >
-          <source src="/assets/campus-tour-video.mp4" type="video/mp4" />
-        </video>
+      <ProgramStudiHomePage />
 
-        {/* Overlay agar teks terbaca */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+      <KehidupanKampusHomePage />
 
-        {/* Konten di Atas Video */}
-        <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Jelajahi Kehidupan di STTB
-          </h2>
-          <p className="text-xl text-gray-200 max-w-2xl mb-8">
-            Lihat lebih dekat fasilitas kami dan rasakan atmosfer belajar yang
-            transformatif di jantung kota Bandung.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-8 rounded-full transition-all">
-              Mulai Virtual Tour
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-full transition-all">
-              Lihat Fasilitas
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Fasilitas Singkat di Bawahnya */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Item Fasilitas 1 */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border-b-4 border-yellow-400">
-            <h4 className="font-bold text-xl text-blue-900 mb-2">
-              Perpustakaan Digital
-            </h4>
-            <p className="text-gray-600 text-sm">
-              Akses ke ribuan jurnal teologi internasional dan koleksi buku
-              fisik yang lengkap.
-            </p>
-          </div>
-          {/* ... Fasilitas lainnya */}
-        </div>
-      </section>
-
-      {/* Panggil Komponen Testimonials di sini */}
       <Testimonials />
 
-      {/* Latest News & Events */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-left">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Berita & Kegiatan Terkini
-              </h2>
-              <p className="text-gray-600">Informasi terbaru dari STTB</p>
-            </div>
-            <Link to="/berita">
-              <Button variant="outline">
-                Lihat Semua <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
-
-          {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
-                <Card key={i}>
-                  <div className="aspect-video bg-gray-200 animate-pulse" />
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              {latestNews.map((item) => (
-                <Card
-                  key={item.id}
-                  className="overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  {item.featuredImage && (
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={item.featuredImage}
-                        alt={item.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  )}
-                  <CardHeader>
-                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>
-                        {new Date(item.publishedAt || "").toLocaleDateString(
-                          "id-ID",
-                          { year: "numeric", month: "long", day: "numeric" },
-                        )}
-                      </span>
-                    </div>
-                    <CardTitle className="line-clamp-2 text-left">
-                      {item.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-left">
-                    <p className="text-gray-600 line-clamp-3 mb-4">
-                      {item.excerpt || item.content}
-                    </p>
-                    <Button variant="link" className="p-0">
-                      Baca Selengkapnya <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+      <BeritaHomePage />
     </div>
   );
 }
