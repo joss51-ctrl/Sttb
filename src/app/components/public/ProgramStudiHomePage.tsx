@@ -3,7 +3,7 @@ import DosenPengajar from "@/assets/TentangKami.webp";
 import MTeologia from "@/assets/MTeologia.webp";
 import SPendidikan from "@/assets/SPendidikan.webp";
 import STeologia from "@/assets/STeologia.webp";
-
+import Decorativestarline from "../ui/decorativestarline";
 const ProgramStudiHomePage = () => {
   // Data dummy untuk 3 program studi. Ganti dengan data asli STTB.
   const programs = [
@@ -34,19 +34,14 @@ const ProgramStudiHomePage = () => {
   ];
 
   return (
-    <section className="bg-white px-4">
+    <section className="bg-white py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-blue-900 leading-tight">
             Program Studi
           </h2>
-          {/* Underline Dekoratif (Dot & Line) */}
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
-            <span className="flex-shrink text-yellow-500">✦</span>{" "}
-            <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
-          </div>
+          <Decorativestarline />
         </div>
 
         {/* Grid 3 Kolom */}
@@ -92,11 +87,8 @@ const ProgramStudiHomePage = () => {
                     </p>
 
                     <div className="mt-6 flex items-center text-red-500 font-bold text-sm">
-                      <span>Lihat Program</span>
-                      <ArrowRight
-                        size={16}
-                        className="ml-2 group-hover:translate-x-3 transition-transform"
-                      />
+                      <span>Selengkapnya</span>
+                      <ArrowRight size={16} className="ml-2 " />
                     </div>
                   </div>
                 </div>

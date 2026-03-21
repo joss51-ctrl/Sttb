@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-
+import DecorativeUnderline from "../ui/decorativeunderline";
 const KehidupanKampusHomePage = () => {
   const facilities = [
     {
@@ -53,10 +53,7 @@ const KehidupanKampusHomePage = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               Kehidupan Kampus
             </h2>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-1.5 bg-yellow-400 rounded-full"></div>
-              <div className="w-2 h-1.5 bg-yellow-400 rounded-full"></div>
-            </div>
+            <DecorativeUnderline />
             <p className="text-gray-600 text-lg">
               Mari mengenal lebih dekat lingkungan belajar yang transformatif,
               inklusif, dan penuh semangat kekeluargaan.

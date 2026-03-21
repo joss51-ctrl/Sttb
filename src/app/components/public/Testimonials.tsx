@@ -1,7 +1,7 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-
+import Decorativestarline from "../ui/decorativestarline";
 const Testimonials = () => {
   const [emblaRef] = useEmblaCarousel({
     loop: true,
@@ -55,11 +55,7 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">
             Apa Kata Mereka?
           </h2>
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
-            <span className="flex-shrink text-yellow-500">✦</span>{" "}
-            <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
-          </div>
+          <Decorativestarline />
           <p className="mt-2 text-gray-500 max-w-xl mx-auto italic">
             "Pengalaman nyata dari mereka yang telah menjadi bagian dari
             keluarga besar STTB."

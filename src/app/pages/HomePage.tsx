@@ -9,7 +9,7 @@ import {
   Users,
   Award,
   Quote,
-} from "lucide-react"; // Gabungkan import lucide
+} from "lucide-react";
 import { Button } from "../components/ui/button";
 import {
   Card,
@@ -27,7 +27,8 @@ import ProgramStudiHomePage from "../components/public/ProgramStudiHomePage";
 import KehidupanKampusHomePage from "../components/public/KehidupanKampusHomePage";
 import BeritaHomePage from "../components/public/BeritaHomePage";
 import HeroHomePage from "../components/public/HeroHomePage";
-
+import DecorativeUnderline from "../components/ui/decorativeunderline";
+import Decorativestarline from "../components/ui/decorativestarline";
 export default function HomePage() {
   const [latestNews, setLatestNews] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -56,8 +57,6 @@ export default function HomePage() {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-
       <HeroHomePage />
 
       {/* Stats Section / Tentang STTB */}
@@ -72,12 +71,7 @@ export default function HomePage() {
                   <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">
                     Tentang STTB
                   </h2>
-                  {/* Underline Dekoratif (Dot & Line) */}
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="w-12 h-1.5 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-1.5 bg-yellow-400 rounded-full"></div>
-                  </div>
-
+                  <DecorativeUnderline />
                   <p className="text-gray-600 leading-relaxed text-lg mb-6">
                     Sekolah Tinggi Teologi Bandung (STTB) adalah institusi
                     pendidikan teologi yang berkomitmen membentuk pemimpin
@@ -154,12 +148,7 @@ export default function HomePage() {
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 text-blue-900">
                   Visi Kami
                 </h2>
-                {/* Underline Dekoratif Dot & Line */}
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
-                  <span className="flex-shrink text-yellow-500">✦</span>{" "}
-                  <div className="w-12 h-0.5 bg-yellow-400 rounded-full"></div>
-                </div>
+                <Decorativestarline />
               </div>
 
               {/* Grid Visi */}
@@ -227,13 +216,10 @@ export default function HomePage() {
             <div className="container mx-auto max-w-5xl">
               <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center justify-center">
                 <div className="md:w-1/3 text-center md:text-left">
-                  <h2 className="text-4xl font-extrabold text-blue-900 mb-4 leading-tight">
+                  <h2 className="text-5xl font-bold text-blue-900 mb-4 leading-tight">
                     Misi <br className="hidden md:block" /> Utama
                   </h2>
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="w-12 h-1.5 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-1.5 bg-yellow-400 rounded-full"></div>
-                  </div>{" "}
+                  <DecorativeUnderline />
                   <p className="text-gray-500">
                     Langkah nyata kami dalam mewujudkan visi transformasi bagi
                     masyarakat.
@@ -263,13 +249,9 @@ export default function HomePage() {
           </section>
         </div>
       </section>
-
       <ProgramStudiHomePage />
-
       <KehidupanKampusHomePage />
-
       <Testimonials />
-
       <BeritaHomePage />
     </div>
   );

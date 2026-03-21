@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import DecorativeUnderline from "../ui/decorativeunderline";
 
 const BeritaHomePage = () => {
   const [activeCategory, setActiveCategory] = useState("Semua");
@@ -68,7 +69,7 @@ const BeritaHomePage = () => {
             <h2 className="text-4xl font-extrabold text-blue-950 mb-4 leading-tight">
               Berita & Kegiatan <span className="text-red-600">Terkini</span>
             </h2>
-            <div className="w-20 h-1.5 bg-yellow-400 rounded-full mb-6"></div>
+            <DecorativeUnderline />
 
             {/* Tabs */}
             <div className="flex flex-wrap gap-2">

@@ -1,30 +1,10 @@
-/**
- * SejarahPage - STTB History Page
- *
- * Features a modern zig-zag timeline layout showcasing the university's history
- * from 1992 to 2022 across 5 major periods.
- *
- * Design:
- * - Alternating image-text layout (left-right, right-left pattern)
- * - Deep Blue and Crimson Red color palette
- * - Generous white space and line-height (1.6)
- * - Vertical timeline connector
- * - Professional, academic, and trustworthy visual style
- */
-
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
-// import logoImage from 'figma:asset/3308a592eb8e599b899462fa3ba1c1cb2cc81be0.png';
-// import apiIcon from 'figma:asset/2b9773aa375b6705fc69f0494c26aab9ef0eb9c4.png';
-// import salibIcon from 'figma:asset/26b21d36b14bc27629e0dbdb42d994a19a8c7b44.png';
-// import alkitabIcon from 'figma:asset/958fed8541ee2bd947354eb0172f818fa1eae33c.png';
-// import tongkatIcon from 'figma:asset/ea920ee6f637ce7a5c5bd5d1a20804989706472c.png';
-
+import FoundersSection from "../components/public/FoundersSection";
 interface TimelineSection {
   year: string;
   title: string;
   description: string;
-  fullDescription?: string; // For expandable content
+  fullDescription?: string;
   imageUrl: string;
   imagePosition: "left" | "right";
 }
@@ -34,24 +14,21 @@ const timelineSections: TimelineSection[] = [
     year: "1992 - 1998",
     title: "Masa Perintisan",
     description: `Pdt. Caleb Tong, Pdt. Joseph Tong, dan Pdt. Dorothy I. Marx mendirikan STTB pada tahun 1992 dengan tujuan menghasilkan Pastor-Scholar yg memiliki kerangka teologi Reformed Injili dalam konteks pekerjaan Tuhan di Indonesia. Pdt. Daniel Lucas Lukito sebagai Dekan Akademik pertama banyak berperan dalam meletakkan kerangka dasar pembangunan STTB. Pembukaan STTB disiapkan sangat baik dengan jajaran dosen yang berkualitas. Komitmen untuk mengejar kualitas akademis yg tinggi didukung juga oleh perpustakaan yang memiliki koleksi buku dan jurnal yang sangat memadai, serta penerbitan Jurnal Teologi STULOS dalam versi Bahasa Indonesia dan Inggris. Pada tahun-tahun pertama diselenggarakan acara dengan lingkup nasional yaitu Ferakristal (Festival Remaja Kristen Pencinta Alkitab). Wisuda pertama diadakan pada tahun 1996.`,
-    imageUrl:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+    imageUrl: "https://sttb.ac.id/storage/2022/06/sejarah-2-rev.png",
     imagePosition: "left",
   },
   {
     year: "1999 - 2005",
     title: "Pergantian Kepemimpinan",
     description: `STTB mengalami pergantian pemimpin dan jajaran dosen. Ibu Dorothy I. Marx menjabat sebagai Rektor dan STTB terus melanjutkan kiprahnya atas anugerah Tuhan dengan membuka program-program studi baru: M.A. (Master of Arts/Magister Artium) untuk memperlengkapi kaum awam dan M.Th. (Master of Theology/Magister Teologi) untuk memperlengkapi para hamba Tuhan yang rindu berkiprah di dunia akademis. Asrama dosen dibangun bersebelahan dengan asrama mahasiswa. STTB berkomitmen menerbitkan seri buku "Sola ... " dan menyelenggarakan acara nasional bagi pemuda dengan nama CYLF (Christian Youth Leadership Forum).`,
-    imageUrl:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop",
+    imageUrl: "https://sttb.ac.id/storage/2022/06/sejarah-3-rev.png",
     imagePosition: "right",
   },
   {
     year: "2006 - 2010",
     title: "Penguatan Akademik",
     description: `Perkembangan STTB berlanjut dalam kepemimpinan Pdt. Joseph Tong yang berkomitmen meningkatkan kualifikasi tenaga pengajar dengan mengutus beberapa dosen untuk studi lanjut di USA. Pada periode ini terbit dua buku Seri Sola, yaitu Sola Scriptura dan Sola Fide. Dalam periode ini STTB membuka program studi berbahasa Mandarin (S.Th., M.Div., dan M.A.) sebagai kontribusinya dalam pelayanan misi di Tiongkok. Untuk itu 2 dosen yaitu Pdt. Lee Ching Yen dan Pdt. Joseph Lin dari Taiwan diundang mengajar para mahasiswa yang datang dari Tiongkok.`,
-    imageUrl:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+    imageUrl: "https://sttb.ac.id/storage/2022/01/sejarah-1.png",
     imagePosition: "left",
   },
   {
@@ -79,32 +56,46 @@ export default function SejarahPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-blue-200 mb-6">
-            <a href="/" className="hover:text-white transition-colors">
-              Beranda
-            </a>
-            <ChevronRight className="w-4 h-4" />
-            <a href="#" className="hover:text-white transition-colors">
-              Tentang Kami
-            </a>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-white">Sejarah</span>
-          </div>
+      <section className="relative overflow-hidden bg-transparent py-12 lg:py-20">
+        {/* (Optional) Efek Grid halus untuk tekstur agar tidak terlalu kosong, 
+          tapi tetap putih bersih */}
+        <div
+          className="absolute inset-0 opacity-[0.015] pointer-events-none"
+          style={{
+            backgroundImage:
+              "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E')",
+          }}
+        ></div>
 
-          {/* Title */}
-          <h1 className="text-4xl lg:text-5xl font-bold">Sejarah STTB</h1>
-          <p className="text-xl text-blue-100 mt-4 max-w-3xl">
-            Perjalanan Sekolah Tinggi Teologi Bandung dari tahun 1992 hingga
-            kini
-          </p>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+            {/* 1. Judul dengan Typography yang diperkuat (Warna Gelap) */}
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 text-red-700">
+              Sejarah{" "}
+              <span className="text-blue-800 relative">
+                STTB
+                <span className="absolute left-0 -bottom-2 w-full h-1 bg-blue-800 rounded-full"></span>
+              </span>
+            </h1>
+
+            {/* 2. Decorative Underline (Center) */}
+            <div className="mb-10 flex justify-center"></div>
+
+            {/* 3. Description dengan Typography yang nyaman (Warna Slate Gelap) */}
+            <p className="text-base lg:text-lg text-slate-700 leading-relaxed max-w-2xl">
+              Perjalanan STTB sejak tahun 1992 hingga masa kini, membentuk
+              generasi pelayan dan pemimpin yang berdampak bagi gereja dan
+              masyarakat.
+            </p>
+          </div>
         </div>
+
+        {/* 5. Bottom Decor: Garis halus penanda batas section (Opsional) */}
+        <div className="absolute bottom-0 left-0 w-full h-px bg-slate-200"></div>
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="relative">
             {/* Vertical Timeline Line */}
@@ -140,7 +131,7 @@ export default function SejarahPage() {
                         <img
                           src={section.imageUrl}
                           alt={section.title}
-                          className="w-full h-80 object-cover rounded-lg shadow-lg"
+                          className="w-full aspect-video object-cover rounded-lg shadow-lg"
                         />
                       </div>
                     </div>
@@ -153,7 +144,14 @@ export default function SejarahPage() {
                           : "lg:col-start-2"
                       }`}
                     >
-                      <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-l-4 border-red-700">
+                      <div
+                        className={`bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border-red-700 
+    ${
+      section.imagePosition === "right"
+        ? "lg:border-r-4 border-l-4"
+        : "border-l-4"
+    }`}
+                      >
                         {/* Year Badge */}
                         <div className="inline-block bg-gradient-to-r from-blue-900 to-blue-800 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
                           {section.year}
@@ -213,9 +211,10 @@ export default function SejarahPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           {/* Section Title */}
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            ARTI LOGO
-          </h2>
+          <h1 className="text-4xl lg:text-5xl font-bold text-center leading-[1.1] mb-10">
+            <span className="text-black">Arti Logo </span>
+            <span className="text-blue-800">STTB</span>
+          </h1>
 
           {/* **PENTING: Kontainer Pembungkus dengan Position Relative** */}
           <div className="relative max-w-7xl mx-auto p-8 border border-gray-100 rounded-2xl bg-white shadow-sm">
@@ -356,11 +355,7 @@ export default function SejarahPage() {
           </div>
         </div>
       </section>
+      <FoundersSection />
     </div>
   );
 }
-
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="w-12 h-1.5 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-1.5 bg-yellow-400 rounded-full"></div>
-                  </div>
