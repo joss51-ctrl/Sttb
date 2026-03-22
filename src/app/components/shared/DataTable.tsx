@@ -30,7 +30,7 @@ export function DataTable<T extends { id: string }>({
         <TableHeader>
           <TableRow>
             {columns.map((col) => (
-              <TableHead key={String(col.key)}>{col.header}</TableHead>
+              <TableHead key={col.key}>{col.header}</TableHead>
             ))}
           </TableRow>
         </TableHeader>
@@ -42,8 +42,8 @@ export function DataTable<T extends { id: string }>({
               className={onRowClick ? 'cursor-pointer hover:bg-muted/50' : ''}
             >
               {columns.map((col) => (
-                <TableCell key={String(col.key)}>
-                  {col.render ? col.render(row[col.key], row) : String(row[col.key])}
+                <TableCell key={col.key}>
+                  {col.render ? col.render((row as any)[col.key], row) : String((row as any)[col.key] ?? '')}
                 </TableCell>
               ))}
             </TableRow>

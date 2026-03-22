@@ -1,9 +1,12 @@
 import useSWR, { useSWRConfig } from 'swr';
 import { useCallback, useState } from 'react';
-import { beritaApi } from 'src/functions/api/beritaApi';
-import { useFetchWithAccessToken } from 'src/functions/useFetchWithAccessToken';
-import { useSwrFetcherWithAccessToken } from 'src/functions/useSwrFetcherWithAccessToken';
-import type { Berita } from 'src/types/index';
+
+import { beritaApi } from '@/functions/api/beritaApi';
+import { useFetchWithAccessToken } from '@/functions/useFetchWithAccessToken';
+import { useSwrFetcherWithAccessToken } from '@/functions/useSwrFetcherWithAccessToken';
+
+import type { Berita } from '@/types';
+
 import { toast } from 'sonner';
 
 export function useBerita(params?: { page?: number; search?: string; status?: string }) {

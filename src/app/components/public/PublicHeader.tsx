@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import {
@@ -10,29 +11,19 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
-import {
-  Home,
-  Calendar,
-  Newspaper,
-  Rocket,
-  TvMinimalPlay,
-  Search,
-  Menu,
-  X,
-  BookOpen,
-} from "lucide-react";
+
 export default function PublicHeader() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const topMenuItems = [
-    { label: "Beranda", href: "/", icon: Home },
-    { label: "Kegiatan", href: "/kegiatan", icon: Calendar },
-    { label: "Berita", href: "/berita", icon: Newspaper },
-    { label: "Media", href: "/media", icon: TvMinimalPlay },
-    { label: "LEAD", href: "/lead", icon: Rocket },
-    { label: "Perpustakaan", href: "/perpustakaan", icon: BookOpen },
+    { label: "Beranda", href: "/" },
+    { label: "Kegiatan", href: "/kegiatan" },
+    { label: "Berita", href: "/berita" },
+    { label: "Media", href: "/media" },
+    { label: "LEAD", href: "/lead" },
+    { label: "Perpustakaan", href: "/perpustakaan" },
   ];
 
   const handleSearch = (e: React.FormEvent) => {
@@ -49,21 +40,19 @@ export default function PublicHeader() {
           <div className="flex items-center justify-between h-14 gap-4">
             {/* BAGIAN KIRI: Menu Utama */}
             <div className="flex items-center gap-5 flex-1">
-              {topMenuItems.map((item) => (
+              {topMenuItems.slice(0, 6).map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="flex items-center gap-1.5 text-xs font-medium hover:text-blue-200 transition-colors hidden lg:flex whitespace-nowrap"
+                  className="text-xs font-medium hover:text-blue-200 transition-colors hidden lg:block whitespace-nowrap"
                 >
-                  {/* Panggil ikon di sini */}
-                  <item.icon size={14} className="opacity-80" />
-                  <span>{item.label}</span>
+                  {item.label}
                 </Link>
               ))}
             </div>
 
             {/* BAGIAN TENGAH: Search Bar (Persegi Panjang) */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-full max-w-md px-4">
+            <div className="flex-[2] max-w-md">
               <form onSubmit={handleSearch} className="relative group">
                 <Input
                   type="search"
@@ -419,7 +408,7 @@ export default function PublicHeader() {
               <Link to="/kontak-kami">
                 <Button
                   variant="ghost"
-                  className="text-sm font-semibold text-white bg-red-600 hover:bg-red-600/90 hover:text-white"
+                  className="text-sm font-semibold text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-all"
                 >
                   Kontak Kami
                 </Button>
@@ -428,7 +417,7 @@ export default function PublicHeader() {
               {/* Tombol Login (Dibuat lebih menonjol) */}
               <Link to="/login">
                 <Button className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md shadow-sm transition-all active:scale-95">
-                  Login
+                  LOGIN
                 </Button>
               </Link>
             </div>

@@ -28,7 +28,6 @@ export interface Berita {
   createdAt: Date;
   status?: ContentStatus;
   authorId?: string;
-  publishedAt?: Date;
 }
 
 export interface Kegiatan {

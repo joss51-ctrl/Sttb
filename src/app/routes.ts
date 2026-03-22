@@ -46,8 +46,8 @@ import KontakKamiPage from './pages/KontakKamiPage';
 
 // CMS pages
 import CMSDashboard from './pages/cms/Dashboard';
-import CMSContentList from './pages/cms/ContentList';
-import CMSContentEditor from './pages/cms/ContentEditor';
+import BeritaList from './pages/cms/Berita/index';
+import BeritaForm from './pages/cms/Berita/[id]';
 import CMSMediaLibrary from './pages/cms/MediaLibrary';
 import CMSUsers from './pages/cms/Users';
 import CMSSettings from './pages/cms/Settings';
@@ -107,9 +107,11 @@ export const router = createBrowserRouter([
     Component: CMSLayout,
     children: [
       { index: true, Component: CMSDashboard },
-      { path: 'content', Component: CMSContentList },
-      { path: 'content/new', Component: CMSContentEditor },
-      { path: 'content/:id', Component: CMSContentEditor },
+      // Replace 'content' with Berita routes
+      { path: 'berita', Component: BeritaList },                 // list
+      { path: 'berita/new', Component: BeritaForm },            // create
+      { path: 'berita/:id', Component: BeritaForm },            // edit
+      // Keep other routes as they are
       { path: 'media', Component: CMSMediaLibrary },
       { path: 'users', Component: CMSUsers },
       { path: 'settings', Component: CMSSettings },
