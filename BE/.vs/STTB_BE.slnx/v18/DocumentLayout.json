@@ -3,64 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260322020044_AuthorId-Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entities\\Migrations\\20260322020044_AuthorId-Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\auth\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\auth\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\berita\\dto\\createberitareqeust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\berita\\dto\\createberitareqeust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\berita\\dto\\deleteberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\berita\\dto\\deleteberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\berita\\dto\\listberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\berita\\dto\\listberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\migrations\\20260319043323_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\migrations\\20260319043323_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\auth\\loginrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\auth\\loginrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\controllers\\beritacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\controllers\\beritacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\auth\\registerrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\auth\\registerrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\berita\\createberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\berita\\createberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\migrations\\20260319043323_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\migrations\\20260319043323_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\controllers\\kegiatancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\controllers\\kegiatancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\berita\\dto\\updateberitareqeust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\berita\\dto\\updateberitareqeust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\berita\\updateberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,28 +39,96 @@
       "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\berita\\getberitalistrequesthandler.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\berita\\createberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\berita\\createberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\responsemodels\\berita\\beritaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\responsemodels\\berita\\beritaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\beritas\\berita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\beritas\\berita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\controllers\\beritacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\controllers\\beritacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\controllers\\kegiatancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\controllers\\kegiatancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\berita\\deleteberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\berita\\deleteberitarequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\berita\\dto\\listberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\berita\\dto\\listberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\auth\\loginrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\auth\\loginrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\berita\\dto\\deleteberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\berita\\dto\\deleteberitarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\beritas\\beritastatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\beritas\\beritastatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\controllers\\mediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\commons.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\commons.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260322013627_New-Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entities\\Migrations\\20260322013627_New-Migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\sttb_be.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\sttb_be.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\sttb_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4A3745-68A2-486E-7A6D-D6992A1C3305}|STTB_BE\\WebAPI.csproj|solutionrelative:sttb_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\auth\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\auth\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\migrations\\20260319043323_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\migrations\\20260319043323_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\auth\\registerrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\auth\\registerrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\contracts\\requestmodels\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D819584-4EC2-52ED-CD78-AA7BA4C26214}|Contracts\\Contracts.csproj|solutionrelative:contracts\\requestmodels\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\entities\\migrations\\20260319043323_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95DE3BD9-A587-35A9-17E0-3C34D2A57441}|Entities\\Entities.csproj|solutionrelative:entities\\migrations\\20260319043323_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|c:\\users\\satri\\downloads\\asas\\project vs\\sttb_be\\sttb\\be\\commons\\commons.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2C0A2A44-6564-1852-0ED6-840EABD93F11}|Commons\\Commons.csproj|solutionrelative:commons\\commons.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,145 +150,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Auth\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\Auth\\User.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Auth\\User.cs",
-              "RelativeToolTip": "Entities\\Auth\\User.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvxIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20260322020044_AuthorId-Migration.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260322020044_AuthorId-Migration.cs",
+              "RelativeDocumentMoniker": "Entities\\Migrations\\20260322020044_AuthorId-Migration.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260322020044_AuthorId-Migration.cs",
+              "RelativeToolTip": "Entities\\Migrations\\20260322020044_AuthorId-Migration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:38:43.116Z",
+              "WhenOpened": "2026-03-22T02:00:44.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Auth\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\LoginRequest.cs",
-              "RelativeToolTip": "Contracts\\RequestModels\\Auth\\LoginRequest.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAuwAgAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UpdateBeritaRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\UpdateBeritaRequestHandler.cs",
+              "RelativeDocumentMoniker": "Commons\\Berita\\UpdateBeritaRequestHandler.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\UpdateBeritaRequestHandler.cs",
+              "RelativeToolTip": "Commons\\Berita\\UpdateBeritaRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:16:28.009Z",
+              "WhenOpened": "2026-03-19T07:04:19.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateBeritaReqeust.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\UpdateBeritaReqeust.cs",
+              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Berita\\DTO\\UpdateBeritaReqeust.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\UpdateBeritaReqeust.cs",
+              "RelativeToolTip": "Contracts\\RequestModels\\Berita\\DTO\\UpdateBeritaReqeust.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T01:32:07.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ListBeritaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
+              "RelativeToolTip": "Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:00:27.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAEoBAAAAAAAAAAAAAEoBAAAwAAAAAAAAAA==",
+              "Title": "DeleteBeritaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
+              "RelativeToolTip": "Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:16:26.171Z",
+              "WhenOpened": "2026-03-19T06:56:40.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Program.cs",
-              "RelativeDocumentMoniker": "STTB_BE\\Program.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Program.cs",
-              "RelativeToolTip": "STTB_BE\\Program.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAADgv6wAAABDAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CreateBeritaReqeust.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\CreateBeritaReqeust.cs",
+              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Berita\\DTO\\CreateBeritaReqeust.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\CreateBeritaReqeust.cs",
+              "RelativeToolTip": "Contracts\\RequestModels\\Berita\\DTO\\CreateBeritaReqeust.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:18:05.839Z",
+              "WhenOpened": "2026-03-22T01:27:49.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "STTB_BE\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\AuthController.cs",
               "RelativeToolTip": "STTB_BE\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAUwNcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T06:34:55.504Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20260319043323_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Entities\\Migrations\\20260319043323_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.cs",
-              "RelativeToolTip": "Entities\\Migrations\\20260319043323_InitialCreate.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGAAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "GetBeritaRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaRequestHandler.cs",
+              "RelativeDocumentMoniker": "Commons\\Berita\\GetBeritaRequestHandler.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaRequestHandler.cs",
+              "RelativeToolTip": "Commons\\Berita\\GetBeritaRequestHandler.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:16:19.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Entities\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Entities\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAuwGcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:19:10.554Z",
+              "WhenOpened": "2026-03-19T07:01:36.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
-              "RelativeToolTip": "Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Title": "GetBeritaListRequestHandler.cs.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
+              "RelativeDocumentMoniker": "Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
+              "RelativeToolTip": "Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:26:18.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\LoginRequestHandler.cs",
-              "RelativeDocumentMoniker": "Commons\\Auth\\LoginRequestHandler.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\LoginRequestHandler.cs",
-              "RelativeToolTip": "Commons\\Auth\\LoginRequestHandler.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAvwCQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:16:30.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegisterRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\RegisterRequestHandler.cs",
-              "RelativeDocumentMoniker": "Commons\\Auth\\RegisterRequestHandler.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\RegisterRequestHandler.cs",
-              "RelativeToolTip": "Commons\\Auth\\RegisterRequestHandler.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:26:41.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BeritaController.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\BeritaController.cs",
-              "RelativeDocumentMoniker": "STTB_BE\\Controllers\\BeritaController.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\BeritaController.cs",
-              "RelativeToolTip": "STTB_BE\\Controllers\\BeritaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:47:32.248Z",
+              "WhenOpened": "2026-03-19T06:57:00.892Z",
               "EditorCaption": ""
             },
             {
@@ -267,48 +273,48 @@
               "RelativeDocumentMoniker": "Commons\\Berita\\CreateBeritaRequestHandler.cs",
               "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\CreateBeritaRequestHandler.cs",
               "RelativeToolTip": "Commons\\Berita\\CreateBeritaRequestHandler.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADgvx0AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvywAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T06:49:22.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BeritaResponse.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\ResponseModels\\Berita\\BeritaResponse.cs",
+              "RelativeDocumentMoniker": "Contracts\\ResponseModels\\Berita\\BeritaResponse.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\ResponseModels\\Berita\\BeritaResponse.cs",
+              "RelativeToolTip": "Contracts\\ResponseModels\\Berita\\BeritaResponse.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T01:30:52.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Berita.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Beritas\\Berita.cs",
+              "RelativeDocumentMoniker": "Entities\\Beritas\\Berita.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Beritas\\Berita.cs",
+              "RelativeToolTip": "Entities\\Beritas\\Berita.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T01:20:24.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "20260319043323_InitialCreate.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
-              "RelativeToolTip": "Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
-              "ViewState": "AgIAAEQBAAAAAAAAAADgv00BAAAwAAAAAAAAAA==",
+              "Title": "BeritaController.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\BeritaController.cs",
+              "RelativeDocumentMoniker": "STTB_BE\\Controllers\\BeritaController.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\BeritaController.cs",
+              "RelativeToolTip": "STTB_BE\\Controllers\\BeritaController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwAoAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:16:21.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DeleteBeritaRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\DeleteBeritaRequestHandler.cs",
-              "RelativeDocumentMoniker": "Commons\\Berita\\DeleteBeritaRequestHandler.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\DeleteBeritaRequestHandler.cs",
-              "RelativeToolTip": "Commons\\Berita\\DeleteBeritaRequestHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:52:17.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\appsettings.json",
-              "RelativeDocumentMoniker": "STTB_BE\\appsettings.json",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\appsettings.json",
-              "RelativeToolTip": "STTB_BE\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-19T06:23:51.722Z",
+              "WhenOpened": "2026-03-19T06:47:32.248Z",
               "EditorCaption": ""
             },
             {
@@ -326,86 +332,86 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GetBeritaListRequestHandler.cs.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
-              "RelativeDocumentMoniker": "Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
-              "RelativeToolTip": "Commons\\Berita\\GetBeritaListRequestHandler.cs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABjAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "DeleteBeritaRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\DeleteBeritaRequestHandler.cs",
+              "RelativeDocumentMoniker": "Commons\\Berita\\DeleteBeritaRequestHandler.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\DeleteBeritaRequestHandler.cs",
+              "RelativeToolTip": "Commons\\Berita\\DeleteBeritaRequestHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA4AAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:57:00.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GetBeritaRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaRequestHandler.cs",
-              "RelativeDocumentMoniker": "Commons\\Berita\\GetBeritaRequestHandler.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\GetBeritaRequestHandler.cs",
-              "RelativeToolTip": "Commons\\Berita\\GetBeritaRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:01:36.679Z",
+              "WhenOpened": "2026-03-19T06:52:17.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "UpdateBeritaRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\UpdateBeritaRequestHandler.cs",
-              "RelativeDocumentMoniker": "Commons\\Berita\\UpdateBeritaRequestHandler.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Berita\\UpdateBeritaRequestHandler.cs",
-              "RelativeToolTip": "Commons\\Berita\\UpdateBeritaRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Title": "LoginRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\LoginRequestHandler.cs",
+              "RelativeDocumentMoniker": "Commons\\Auth\\LoginRequestHandler.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\LoginRequestHandler.cs",
+              "RelativeToolTip": "Commons\\Auth\\LoginRequestHandler.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAADgvyQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:04:19.663Z",
+              "WhenOpened": "2026-03-19T07:16:30.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Entities\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Entities\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAawBcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T06:19:10.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MediaController.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\MediaController.cs",
+              "RelativeDocumentMoniker": "STTB_BE\\Controllers\\MediaController.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\MediaController.cs",
+              "RelativeToolTip": "STTB_BE\\Controllers\\MediaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T06:35:42.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BeritaStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Beritas\\BeritaStatusEnum.cs",
+              "RelativeDocumentMoniker": "Entities\\Beritas\\BeritaStatusEnum.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Beritas\\BeritaStatusEnum.cs",
+              "RelativeToolTip": "Entities\\Beritas\\BeritaStatusEnum.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T01:23:24.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "ListBeritaRequest.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
-              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
-              "RelativeToolTip": "Contracts\\RequestModels\\Berita\\DTO\\ListBeritaRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Title": "20260322013627_New-Migration.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260322013627_New-Migration.cs",
+              "RelativeDocumentMoniker": "Entities\\Migrations\\20260322013627_New-Migration.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260322013627_New-Migration.cs",
+              "RelativeToolTip": "Entities\\Migrations\\20260322013627_New-Migration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:00:27.379Z",
+              "WhenOpened": "2026-03-22T01:36:27.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "DeleteBeritaRequest.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
-              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
-              "RelativeToolTip": "Contracts\\RequestModels\\Berita\\DTO\\DeleteBeritaRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:56:40.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Commons",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Commons.csproj",
-              "RelativeDocumentMoniker": "Commons\\Commons.csproj",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Commons.csproj",
-              "RelativeToolTip": "Commons\\Commons.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-19T06:20:28.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Contracts",
+              "Title": "Contracts.csproj",
               "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\Contracts.csproj",
               "RelativeDocumentMoniker": "Contracts\\Contracts.csproj",
               "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\Contracts.csproj",
@@ -418,15 +424,137 @@
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "MediaController.cs",
-              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\MediaController.cs",
-              "RelativeDocumentMoniker": "STTB_BE\\Controllers\\MediaController.cs",
-              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Controllers\\MediaController.cs",
-              "RelativeToolTip": "STTB_BE\\Controllers\\MediaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T06:35:42.879Z",
+              "Title": "STTB_BE.http",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\STTB_BE.http",
+              "RelativeDocumentMoniker": "STTB_BE\\STTB_BE.http",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\STTB_BE.http",
+              "RelativeToolTip": "STTB_BE\\STTB_BE.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-03-22T01:10:10.192Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\appsettings.json",
+              "RelativeDocumentMoniker": "STTB_BE\\appsettings.json",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\appsettings.json",
+              "RelativeToolTip": "STTB_BE\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-19T06:23:51.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Program.cs",
+              "RelativeDocumentMoniker": "STTB_BE\\Program.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\STTB_BE\\Program.cs",
+              "RelativeToolTip": "STTB_BE\\Program.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAADgv6wAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T06:18:05.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20260319043323_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Entities\\Migrations\\20260319043323_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.cs",
+              "RelativeToolTip": "Entities\\Migrations\\20260319043323_InitialCreate.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:16:19.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Entities\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAAAEoBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:16:26.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Auth\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\LoginRequest.cs",
+              "RelativeToolTip": "Contracts\\RequestModels\\Auth\\LoginRequest.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:16:28.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Auth\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\Auth\\User.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Auth\\User.cs",
+              "RelativeToolTip": "Entities\\Auth\\User.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:38:43.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
+              "RelativeToolTip": "Contracts\\RequestModels\\Auth\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:26:18.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RegisterRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\RegisterRequestHandler.cs",
+              "RelativeDocumentMoniker": "Commons\\Auth\\RegisterRequestHandler.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Auth\\RegisterRequestHandler.cs",
+              "RelativeToolTip": "Commons\\Auth\\RegisterRequestHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:26:41.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20260319043323_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
+              "RelativeToolTip": "Entities\\Migrations\\20260319043323_InitialCreate.Designer.cs",
+              "ViewState": "AgIAAEQBAAAAAAAAAADgv00BAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:16:21.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Commons.csproj",
+              "DocumentMoniker": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Commons.csproj",
+              "RelativeDocumentMoniker": "Commons\\Commons.csproj",
+              "ToolTip": "C:\\Users\\satri\\Downloads\\asas\\Project VS\\STTB_BE\\Sttb\\BE\\Commons\\Commons.csproj",
+              "RelativeToolTip": "Commons\\Commons.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-19T06:20:28.148Z"
             }
           ]
         }

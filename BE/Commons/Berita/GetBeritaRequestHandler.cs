@@ -35,7 +35,9 @@ public class GetBeritaRequestHandler :
             ThumbnailUrl = berita.ThumbnailUrl,
             Category = berita.Category,
             Taglines = berita.Taglines,
-            CreatedAt = berita.CreatedAt
+            CreatedAt = berita.CreatedAt,
+            AuthorId = berita.AuthorId,
+            Status = Entities.Beritas.BeritaStatus.Published
         };
     }
 }

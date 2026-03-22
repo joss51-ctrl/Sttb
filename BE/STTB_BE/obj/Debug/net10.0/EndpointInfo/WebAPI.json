@@ -851,9 +851,27 @@
           "createdAt": {
             "type": "string",
             "format": "date"
+          },
+          "status": {
+            "$ref": "#/components/schemas/BeritaStatus"
+          },
+          "authorId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
+      },
+      "BeritaStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "CreateBeritaRequest": {
         "type": "object",
@@ -875,6 +893,13 @@
             "nullable": true
           },
           "taglines": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/BeritaStatus"
+          },
+          "authorId": {
             "type": "string",
             "nullable": true
           }
@@ -1146,6 +1171,13 @@
             "nullable": true
           },
           "taglines": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/BeritaStatus"
+          },
+          "authorId": {
             "type": "string",
             "nullable": true
           }

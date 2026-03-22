@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Entities.Beritas;
 
 namespace STTB_BE.Entities;
 
@@ -21,4 +22,6 @@ public class Berita
     public string Taglines { get; set; } = string.Empty;
 
     public DateOnly CreatedAt { get; set; }
+    public BeritaStatus Status { get; set; }
+    public string AuthorId { get; set;} = string.Empty;
 }
