@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Save, ArrowLeft } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
@@ -89,7 +89,7 @@ export default function ContentEditor() {
         toast.success('Content created successfully');
       }
       
-      navigate('/cms/content');
+      navigate('/cms/berita');
     } catch (error) {
       console.error('Error saving content:', error);
       toast.error('Failed to save content');
@@ -113,7 +113,7 @@ export default function ContentEditor() {
   return (
     <div className="space-y-6 max-w-4xl">
       <div className="flex items-center gap-4">
-        <Button variant="ghost" onClick={() => navigate('/cms/content')}>
+        <Button variant="ghost" onClick={() => navigate('/cms/berita')}>
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back
         </Button>
@@ -307,7 +307,7 @@ export default function ContentEditor() {
               </>
             )}
           </Button>
-          <Button type="button" variant="outline" onClick={() => navigate('/cms/content')}>
+          <Button type="button" variant="outline" onClick={() => navigate('/cms/berita')}>
             Cancel
           </Button>
         </div>

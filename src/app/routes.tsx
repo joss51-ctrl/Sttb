@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter } from 'react-router-dom';
 
 // Public pages
 import HomePage from './pages/HomePage';
@@ -107,11 +107,11 @@ export const router = createBrowserRouter([
     Component: CMSLayout,
     children: [
       { index: true, Component: CMSDashboard },
-      // Replace 'content' with Berita routes
-      { path: 'berita', Component: BeritaList },                 // list
-      { path: 'berita/new', Component: BeritaForm },            // create
-      { path: 'berita/:id', Component: BeritaForm },            // edit
-      // Keep other routes as they are
+      // Berita routes – now using element (JSX) instead of Component
+      { path: 'berita', element: <BeritaList /> },
+      { path: 'berita/new', element: <BeritaForm /> },
+      { path: 'berita/:id', element: <BeritaForm /> },
+      // Keep other CMS routes as they were
       { path: 'media', Component: CMSMediaLibrary },
       { path: 'users', Component: CMSUsers },
       { path: 'settings', Component: CMSSettings },

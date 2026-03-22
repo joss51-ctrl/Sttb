@@ -7,7 +7,10 @@ export type UserRole = 'Super Admin' | 'Content Admin' | 'Editor' | 'Approver';
 export type ContentStatus = 'Draft' | 'In Review' | 'Approved' | 'Published' | 'Scheduled' | 'Rejected';
 export type KegiatanStatus = 'Ongoing' | 'Finished' | 'Expired';
 export type MediaFormat = 'Video' | 'Artikel';
-const navigate = useNavigate();
+
+
+
+
 export interface User {
   id: string;
   fullName: string;

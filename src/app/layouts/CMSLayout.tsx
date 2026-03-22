@@ -1,4 +1,4 @@
-import { Outlet, Link, useLocation } from 'react-router';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import { 
   LayoutDashboard, 
   FileText, 
@@ -23,7 +23,7 @@ export default function CMSLayout() {
 
   const navigation = [
     { name: 'Dashboard', href: '/cms', icon: LayoutDashboard },
-    { name: 'Content', href: '/cms/content', icon: FileText },
+    { name: 'Content', href: '/cms/berita', icon: FileText },
     { name: 'Media', href: '/cms/media', icon: Image },
     { name: 'Users', href: '/cms/users', icon: Users },
     { name: 'Settings', href: '/cms/settings', icon: Settings },

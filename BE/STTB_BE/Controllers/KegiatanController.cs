@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using STTB_BE.Contracts.RequestModels.Kegiatan;
 using STTB_BE.Contracts.ResponseModels.Kegiatan;
@@ -17,6 +18,7 @@ public class KegiatanController : ControllerBase
     }
 
     [HttpGet("list")]
+    [AllowAnonymous]
     public async Task<ActionResult<GetKegiatanListResponse>> List(
         [FromQuery] GetKegiatanListRequest request,
         CancellationToken cancellationToken)
@@ -26,6 +28,7 @@ public class KegiatanController : ControllerBase
     }
 
     [HttpGet("get/{id}")]
+    [AllowAnonymous]
     public async Task<ActionResult<GetKegiatanResponse>> Get(
         Guid id,
         CancellationToken cancellationToken)

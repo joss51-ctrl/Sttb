@@ -4,7 +4,7 @@
  */
 
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { Calendar, Play } from 'lucide-react';
 
 // Media item type

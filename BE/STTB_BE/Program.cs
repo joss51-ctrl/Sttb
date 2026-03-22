@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Services
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    });
 
 // DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -79,7 +84,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins(builder.Configuration["Frontend:Url"] ?? "http://localhost:3000")
+        policy.WithOrigins(builder.Configuration["Frontend:Url"] ?? "http://localhost:5173")
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { Plus, Search, Filter, MoreVertical, Edit, Trash2, Eye } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
@@ -95,7 +95,7 @@ export default function ContentList() {
           <h1 className="text-3xl font-bold text-gray-900">Content</h1>
           <p className="text-gray-600 mt-1">Manage all website content</p>
         </div>
-        <Link to="/cms/content/new">
+        <Link to="/cms/berita/new">
           <Button>
             <Plus className="w-4 h-4 mr-2" />
             Create New
@@ -182,7 +182,7 @@ export default function ContentList() {
                     <Badge variant="outline">{item.contentType}</Badge>
                   </TableCell>
                   <TableCell>{getStatusBadge(item.status)}</TableCell>
-                  <TableCell className="text-gray-600">{item.author.name}</TableCell>
+                  <TableCell className="text-gray-600">{item.authorId}</TableCell>
                   <TableCell className="text-gray-600">
                     {new Date(item.updatedAt).toLocaleDateString('id-ID')}
                   </TableCell>
@@ -195,7 +195,7 @@ export default function ContentList() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuItem asChild>
-                          <Link to={`/cms/content/${item.id}`} className="cursor-pointer">
+                          <Link to={`/cms/berita/${item.id}`} className="cursor-pointer">
                             <Edit className="w-4 h-4 mr-2" />
                             Edit
                           </Link>
