@@ -87,19 +87,6 @@ export default function InfoPersyaratanPage() {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
-      <section className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-blue-900 transition-colors">Beranda</a>
-            <ChevronRight className="w-4 h-4" />
-            <a href="#" className="hover:text-blue-900 transition-colors">Admisi</a>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 font-medium">Info Persyaratan</span>
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4 text-center">

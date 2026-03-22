@@ -33,19 +33,6 @@ export default function ProsedurAdmisiPage() {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
-      <section className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-blue-900 transition-colors">Beranda</a>
-            <ChevronRight className="w-4 h-4" />
-            <a href="#" className="hover:text-blue-900 transition-colors">Admisi</a>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 font-medium">Prosedur Admisi</span>
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4 text-center">
@@ -454,7 +441,7 @@ export default function ProsedurAdmisiPage() {
 
                       <Button 
                         className="w-full bg-blue-900 hover:bg-blue-800 text-white py-6 text-lg font-semibold"
-                        onClick={() => window.open('https://sis.sttb.ac.id/pmb/konfirmasi', '_blank')}
+                        onClick={() => window.open('https://sttb.ac.id/konfirmasi', '_blank')}
                       >
                         <FileCheck className="w-5 h-5 mr-2" />
                         Konfirmasi via Website

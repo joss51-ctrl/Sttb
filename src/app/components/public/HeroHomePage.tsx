@@ -9,12 +9,12 @@ const HeroHomePage = () => {
         <div className="relative z-20 space-y-10 py-12 lg:py-24 text-left">
           <div className="space-y-6">
             {/* Sub-header Merah (Welcome Text) */}
-            <p className="text-red-800 font-bold text-md lg:text-xl tracking-tight border-l-4 border-red-800 pl-4">
+            <p className="text-red-600 font-bold text-md lg:text-xl tracking-tight border-l-4 border-red-600 pl-4">
               Selamat Datang Di
             </p>
 
             {/* Judul Utama - Sangat Bold & Sharp */}
-            <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-black text-slate-900 leading-[1.05] tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-bold text-blue-900 leading-[1.05]">
               Sekolah <br className="hidden lg:block" />
               Tinggi <br className="hidden lg:block" />
               Teologia <br className="hidden lg:block" />
@@ -24,8 +24,7 @@ const HeroHomePage = () => {
             {/* Deskripsi (Sub-judul) */}
             <p className="text-slate-600 text-lg md:text-xl max-w-lg leading-relaxed font-medium">
               BANDUNG THEOLOGICAL SEMINARY
-              <span className="block text-slate-900 italic mt-2">
-                {/* 'block' memaksa pindah baris, 'mt-2' memberi sedikit jarak ke atas */}
+              <span className="block text-slate-900  mt-2">
                 Menghasilkan pastor-scholars yang berdampak dalam konteks
                 pelayanan urban.
               </span>
@@ -35,26 +34,20 @@ const HeroHomePage = () => {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-6 pt-8">
             {/* Tombol Utama (Solid Red) */}
-            <button className="bg-red-800 hover:bg-red-900 text-white px-8 py-4 flex items-center gap-4 transition-all group shadow-xl shadow-red-900/20 active:scale-95">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 flex items-center gap-4 transition-all group shadow-xl shadow-red-900/20 active:scale-95">
               <span className="font-bold text-sm uppercase tracking-widest">
                 Daftar Sekarang
               </span>
-              <ArrowRight
-                size={20}
-                className="group-hover:translate-x-2 transition-transform"
-              />
+              <ArrowRight size={20} />
             </button>
 
             {/* Tombol Sekunder (Ghost/Outline Style) */}
             <a
               href="#"
-              className="px-8 py-4 flex items-center gap-3 text-slate-900 border border-slate-200 hover:border-red-800 hover:text-red-800 transition-all group font-bold text-sm uppercase tracking-widest bg-white shadow-sm"
+              className="px-8 py-4 flex items-center gap-3 text-slate-900 border border-slate-200 hover:border-red-600 hover:text-red-600 transition-all group font-bold text-sm uppercase tracking-widest bg-white shadow-sm"
             >
               Lihat Program Studi
-              <MoveRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
+              <MoveRight size={18} />
             </a>
           </div>
         </div>

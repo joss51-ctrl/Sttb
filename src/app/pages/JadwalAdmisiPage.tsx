@@ -8,7 +8,7 @@ import { ChevronRight, Calendar, Clock, Video, FileText, Users, CheckCircle2 } f
 import { Button } from '../components/ui/button';
 
 type WaveStatus = 'Selesai' | 'Berjalan' | 'Akan Datang';
-type TimelineStatus = 'Past' | 'Active' | 'Upcoming';
+type TimelineStatus = 'Selesai' | 'Berjalan' | 'Akan Datang';
 
 interface Wave {
   id: number;
@@ -136,19 +136,19 @@ export default function JadwalAdmisiPage() {
   };
 
   const getTabStatusLabel = (id: number): TimelineStatus => {
-    if (id === 1) return 'Past';
-    if (id === 2) return 'Active';
-    return 'Upcoming';
+    if (id === 1) return 'Selesai';
+    if (id === 2) return 'Berjalan';
+    return 'Akan Datang';
   };
 
   const getTabStatusBadgeStyle = (status: TimelineStatus) => {
     switch (status) {
-      case 'Past':
-        return 'bg-gray-200 text-gray-600';
-      case 'Active':
-        return 'bg-green-500 text-white';
-      case 'Upcoming':
-        return 'bg-blue-500 text-white';
+      case 'Selesai':
+        return 'bg-gray-200 text-gray-600 border-gray-300';
+      case 'Berjalan':
+        return 'bg-green-100 text-green-700 border-green-300';
+      case 'Akan Datang':
+        return 'bg-blue-100 text-blue-700 border-blue-300';
     }
   };
 
@@ -167,18 +167,7 @@ export default function JadwalAdmisiPage() {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
-      <section className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-blue-900 transition-colors">Beranda</a>
-            <ChevronRight className="w-4 h-4" />
-            <a href="#" className="hover:text-blue-900 transition-colors">Admisi</a>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 font-medium">Jadwal Admisi</span>
-          </div>
-        </div>
-      </section>
+
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
@@ -208,11 +197,7 @@ export default function JadwalAdmisiPage() {
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${getStatusBadgeStyle(wave.status)}`}>
                     {wave.status}
                   </span>
-                  {wave.status === 'Berjalan' && (
-                    <span className="text-xs font-bold text-red-700 bg-red-50 px-3 py-1 rounded-full">
-                      CURRENT
-                    </span>
-                  )}
+                  {wave.status === 'Berjalan'}
                 </div>
 
                 {/* Wave Title */}
@@ -267,11 +252,6 @@ export default function JadwalAdmisiPage() {
                 DAFTAR SEKARANG
               </Button>
             </a>
-            <a href="#butuh-bantuan">
-              <Button size="lg" variant="outline" className="border-2 border-blue-900 text-blue-900 hover:bg-blue-50 px-8 py-6 text-lg font-semibold">
-                Tanya Admin
-              </Button>
-            </a>
           </div>
         </div>
       </section>
@@ -293,7 +273,7 @@ export default function JadwalAdmisiPage() {
                 return (
                   <div key={wave.id} className="flex flex-col items-center">
                     {/* Status Badge Above Tab */}
-                    <span className={`text-[10px] font-bold px-3 py-1 rounded-full mb-2 ${getTabStatusBadgeStyle(status)}`}>
+                    <span className={`text-[10px] font-semibold px-3 py-1 rounded-full mb-2 ${getTabStatusBadgeStyle(status)}`}>
                       {status}
                     </span>
                     
@@ -385,7 +365,7 @@ export default function JadwalAdmisiPage() {
             
             <div className="bg-blue-50 rounded-xl p-8 border-2 border-blue-100">
               <p className="text-sm font-semibold text-blue-900 mb-2">Contact Person Admisi:</p>
-              <p className="text-2xl font-bold text-blue-900 mb-1">Ibu Sarah Wijaya</p>
+              <p className="text-2xl font-bold text-blue-900 mb-1">Admin STTB</p>
               <p className="text-gray-600 mb-4">Koordinator Admisi</p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
