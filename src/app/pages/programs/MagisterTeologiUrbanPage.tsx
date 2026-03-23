@@ -10,7 +10,7 @@ export default function MagisterTeologiUrbanPage() {
     <div className="bg-white">
       <ProgramLayout data={pageData} />
 
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-br from-slate-600 via-slate-700 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Tingkatkan Pelayanan Anda</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -19,9 +19,6 @@ export default function MagisterTeologiUrbanPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2">
               Daftar Sekarang <ChevronRight className="w-5 h-5" />
-            </a>
-            <a href="#" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Download Brosur
             </a>
           </div>
         </div>

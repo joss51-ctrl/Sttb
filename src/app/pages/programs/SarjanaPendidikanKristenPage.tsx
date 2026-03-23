@@ -8,7 +8,7 @@ export default function SarjanaTeologiPage() {
       {/* Hero Section */}
       <ProgramLayout data={pageData} />{" "}
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Siap Bergabung dengan Program Sarjana Pendidikan Kristen?
