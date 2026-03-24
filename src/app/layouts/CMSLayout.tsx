@@ -12,11 +12,6 @@ import {
 import { Button } from '../components/ui/button';
 import { useState } from 'react';
 
-/**
- * CMSLayout - Layout wrapper for CMS admin pages
- * Features sidebar navigation, top bar with user info, and main content area
- * Follows enterprise-grade CMS design patterns with role-based access
- */
 export default function CMSLayout() {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);

@@ -12,7 +12,7 @@ interface FacultyMember {
 export default function DewanDosenPage() {
   // KETUA - The Head
   const ketua: FacultyMember = {
-    name: "Dr. Pdt. Johanes Waldes Hasugian, M.Th.",
+    name: "Sutrisna Harjanto",
     title: "Ketua Sekolah Tinggi Teologi Bandung",
     expertise: "Teologi Sistematika & Kepemimpinan Gereja",
     education: [
@@ -21,13 +21,13 @@ export default function DewanDosenPage() {
       "D.Min., Asia Theological Seminary",
       "Ph.D., Theological Studies, Trinity Theological College",
     ],
-    image: "professional asian theology professor",
+    image: "https://sttb.ac.id/storage/2022/06/sutrisna-1.png",
   };
 
   // WAKIL KETUA - Vice Chairs
   const wakilKetua: FacultyMember[] = [
     {
-      name: "Dr. Pdt. Samuel Tandiasa, M.Div.",
+      name: "Tan Giok Lie",
       title: "Wakil Ketua I Bidang Akademik",
       expertise: "Perjanjian Baru & Hermeneutika",
       education: [
@@ -36,10 +36,10 @@ export default function DewanDosenPage() {
         "Th.M., Princeton Theological Seminary",
         "Ph.D., Biblical Studies, University of Edinburgh",
       ],
-      image: "asian male professor theology",
+      image: "https://sttb.ac.id/storage/2022/06/tan-giok-lie.png",
     },
     {
-      name: "Pdt. Dr. Esther Christiani, M.Th.",
+      name: "Wemmy Prayogo",
       title: "Wakil Ketua II Bidang Kemahasiswaan",
       expertise: "Pendidikan Kristen & Pastoral Care",
       education: [
@@ -48,10 +48,10 @@ export default function DewanDosenPage() {
         "D.Min., Fuller Theological Seminary",
         "Ph.D., Christian Education, Biola University",
       ],
-      image: "asian female professor academic",
+      image: "https://sttb.ac.id/storage/2022/01/wemmy-prayogo.png",
     },
     {
-      name: "Dr. Pdt. Markus Setiawan, M.A.",
+      name: "Johan Setiawan",
       title: "Wakil Ketua III Bidang Administrasi & Keuangan",
       expertise: "Manajemen Institusi Teologi",
       education: [
@@ -60,7 +60,7 @@ export default function DewanDosenPage() {
         "D.Min., Leadership Studies, Gordon-Conwell",
         "Ph.D., Higher Education Management, Liberty University",
       ],
-      image: "asian male administrator professional",
+      image: "https://sttb.ac.id/storage/2022/06/johan-setiawan.png",
     },
   ];
 
@@ -250,7 +250,7 @@ export default function DewanDosenPage() {
                     {/* Large Profile Image */}
                     <div className="w-full md:w-64 flex-shrink-0">
                       <ImageWithFallback
-                        src={`https://source.unsplash.com/400x500/?${encodeURIComponent(ketua.image)}`}
+                        src={ketua.image}
                         alt={ketua.name}
                         className="w-full h-80 object-cover rounded"
                       />
@@ -310,9 +310,9 @@ export default function DewanDosenPage() {
                   {/* Profile Image */}
                   <div className="p-6">
                     <ImageWithFallback
-                      src={`https://source.unsplash.com/400x500/?${encodeURIComponent(wakil.image)}`}
+                      src={wakil.image}
                       alt={wakil.name}
-                      className="w-full h-72 object-cover rounded mb-4"
+                      className="w-full h-72 object-contain rounded mb-4"
                     />
 
                     {/* Name */}

@@ -48,36 +48,36 @@ export default function PublicHeader() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-14 gap-4">
             {/* BAGIAN KIRI: Menu Utama */}
-            <div className="flex items-center gap-5 flex-1">
+            <div className="flex items-center gap-4 flex-1">
               {topMenuItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="flex items-center gap-1.5 text-xs font-medium hover:text-blue-200 transition-colors hidden lg:flex whitespace-nowrap"
+                  className="flex items-center gap-1.5 text-[11px] font-medium hover:text-blue-200 transition-colors hidden xl:flex whitespace-nowrap"
                 >
-                  {/* Panggil ikon di sini */}
                   <item.icon size={14} className="opacity-80" />
                   <span>{item.label}</span>
                 </Link>
               ))}
             </div>
 
-            {/* BAGIAN TENGAH: Search Bar (Persegi Panjang) */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-full max-w-md px-4">
-              <form onSubmit={handleSearch} className="relative group">
+            {/* BAGIAN TENGAH: Search Bar (Hapus 'absolute') */}
+            <div className="hidden md:flex flex-1 justify-center max-w-md">
+              <form onSubmit={handleSearch} className="relative group w-full">
                 <Input
                   type="search"
                   placeholder="Cari informasi di STTB..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full h-9 bg-blue-800/50 border-blue-700 text-white placeholder:text-blue-300 focus:bg-white focus:text-gray-900 transition-all rounded-md"
+                  className="w-full h-8 bg-blue-800/50 border-blue-700 text-white placeholder:text-blue-300 focus:bg-white focus:text-gray-900 transition-all rounded-md text-xs"
                 />
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-blue-300 group-focus-within:text-gray-500 pointer-events-none" />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-blue-300 group-focus-within:text-gray-500 pointer-events-none" />
               </form>
             </div>
 
+            {/* BAGIAN KANAN: Language Selector */}
             <div className="flex items-center gap-5 flex-1 justify-end">
-              <div className="flex items-center text-[10px] font-bold tracking-widest uppercase">
+              <div className="flex items-center text-[10px] font-bold tracking-widest uppercase whitespace-nowrap">
                 <button className="text-white hover:text-blue-200 transition-colors">
                   Indonesia
                 </button>

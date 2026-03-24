@@ -4,8 +4,6 @@ import {
   BookOpen,
   Shield,
   Zap,
-  GraduationCap,
-  Globe,
 } from "lucide-react";
 
 export default function VisiMisiPage() {
@@ -35,15 +33,6 @@ export default function VisiMisiPage() {
             {/* Card 1: Pastor-Scholar */}
             <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="flex items-center h-full">
-                {/* Icon Container - Left */}
-                <div className="flex-shrink-0 w-32 h-full bg-red-50 flex items-center justify-center p-6">
-                  <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                    <GraduationCap
-                      className="w-8 h-8 text-white"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-                </div>
 
                 {/* Text Content - Right */}
                 <div className="flex-1 p-6">
@@ -64,15 +53,6 @@ export default function VisiMisiPage() {
             {/* Card 2: Berita Injil yang utuh */}
             <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="flex items-center h-full">
-                {/* Icon Container - Left */}
-                <div className="flex-shrink-0 w-32 h-full bg-red-50 flex items-center justify-center p-6">
-                  <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                    <Globe
-                      className="w-8 h-8 text-white"
-                      strokeWidth={1.5}
-                    />{" "}
-                  </div>
-                </div>
 
                 {/* Text Content - Right */}
                 <div className="flex-1 p-6">
@@ -93,24 +73,6 @@ export default function VisiMisiPage() {
             {/* Card 3: Seluruh umat Allah */}
             <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="flex items-center h-full">
-                {/* Icon Container - Left */}
-                <div className="flex-shrink-0 w-32 h-full bg-red-50 flex items-center justify-center p-6">
-                  <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                  </div>
-                </div>
 
                 {/* Text Content - Right */}
                 <div className="flex-1 p-6">
@@ -129,24 +91,6 @@ export default function VisiMisiPage() {
             {/* Card 4: Masyarakat urban */}
             <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="flex items-center h-full">
-                {/* Icon Container - Left */}
-                <div className="flex-shrink-0 w-32 h-full bg-red-50 flex items-center justify-center p-6">
-                  <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                      />
-                    </svg>
-                  </div>
-                </div>
 
                 {/* Text Content - Right */}
                 <div className="flex-1 p-6">
@@ -235,9 +179,6 @@ export default function VisiMisiPage() {
 
         {/* Content */}
         <div className="relative container mx-auto px-4 text-center text-white">
-          <p className="text-sm uppercase tracking-widest mb-4 text-blue-200">
-            Motto STTB
-          </p>
           <h2 className="text-5xl lg:text-6xl font-bold mb-6">TO THE LORD</h2>
           <h2 className="text-5xl lg:text-6xl font-bold mb-4">
             THE BEST THE GREATEST
@@ -260,13 +201,6 @@ export default function VisiMisiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {/* Card 1: CHRIST CENTERED */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
-              {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                  <Cross className="w-8 h-8 text-white" />
-                </div>
-              </div>
-
               {/* Title */}
               <h3 className="text-xl font-bold text-blue-900 text-center mb-6">
                 CHRIST CENTERED
@@ -299,13 +233,6 @@ export default function VisiMisiPage() {
 
             {/* Card 2: TEKS - KONTEKS */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
-              {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
-              </div>
-
               {/* Title */}
               <h3 className="text-xl font-bold text-blue-900 text-center mb-6">
                 TEKS - KONTEKS
@@ -337,13 +264,6 @@ export default function VisiMisiPage() {
 
             {/* Card 3: PENATALAYANAN */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
-              {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-              </div>
-
               {/* Title */}
               <h3 className="text-xl font-bold text-blue-900 text-center mb-6">
                 PENATALAYANAN
@@ -385,13 +305,6 @@ export default function VisiMisiPage() {
 
             {/* Card 4: TRANSFORMATIF */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
-              {/* Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-              </div>
-
               {/* Title */}
               <h3 className="text-xl font-bold text-blue-900 text-center mb-6">
                 TRANSFORMATIF
