@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Entities.Beritas;
+using MediatR;
 using Microsoft.Extensions.Logging;
 using STTB_BE.Contracts.RequestModels.Berita;
 using STTB_BE.Entities;
@@ -39,7 +40,9 @@ public class CreateBeritaRequestHandler : IRequestHandler<CreateBeritaRequest, G
                 ThumbnailUrl = request.ThumbnailUrl ?? string.Empty,  // Handle null
                 Category = request.Category ?? string.Empty,  // Handle null
                 Taglines = request.Taglines ?? string.Empty,  // Handle null
-                CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow)
+                CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow),
+                Status = request.Status ?? BeritaStatus.Draft,
+                AuthorId = request.AuthorId
             };
 
             // 4. Add to database

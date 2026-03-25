@@ -1,4 +1,6 @@
-﻿namespace STTB_BE.Contracts.ResponseModels.Berita;
+﻿using Entities.Beritas;
+
+namespace STTB_BE.Contracts.ResponseModels.Berita;
 
 public class BeritaResponse
 {
@@ -15,4 +17,6 @@ public class BeritaResponse
     public string Taglines { get; set; } = string.Empty;
 
     public DateOnly CreatedAt { get; set; }
+    public BeritaStatus Status { get; set; }
+    public string AuthorId { get; set; } = string.Empty;
 }

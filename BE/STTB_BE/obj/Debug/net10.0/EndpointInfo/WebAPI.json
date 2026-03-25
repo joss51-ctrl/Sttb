@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/v1/Auth/login": {
+    "/api/v1/auth/login": {
       "post": {
         "tags": [
           "Auth"
@@ -53,7 +53,7 @@
         }
       }
     },
-    "/api/v1/Auth/register": {
+    "/api/v1/auth/register": {
       "post": {
         "tags": [
           "Auth"
@@ -101,7 +101,36 @@
         }
       }
     },
-    "/api/v1/Auth/db-test": {
+    "/api/v1/auth/me": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/db-test": {
       "get": {
         "tags": [
           "Auth"
@@ -113,7 +142,7 @@
         }
       }
     },
-    "/api/v1/Auth/seed-users": {
+    "/api/v1/auth/seed-users": {
       "post": {
         "tags": [
           "Auth"
@@ -125,7 +154,7 @@
         }
       }
     },
-    "/api/v1/Auth/users": {
+    "/api/v1/auth/users": {
       "get": {
         "tags": [
           "Auth"
@@ -137,7 +166,7 @@
         }
       }
     },
-    "/api/v1/Auth/ping": {
+    "/api/v1/auth/ping": {
       "get": {
         "tags": [
           "Auth"
@@ -371,7 +400,7 @@
         }
       }
     },
-    "/api/kegiatan/v1Kegiatan/list": {
+    "/api/v1/kegiatan": {
       "get": {
         "tags": [
           "Kegiatan"
@@ -407,49 +436,7 @@
             }
           }
         }
-      }
-    },
-    "/api/kegiatan/v1Kegiatan/get/{id}": {
-      "get": {
-        "tags": [
-          "Kegiatan"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetKegiatanResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetKegiatanResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetKegiatanResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/kegiatan/v1Kegiatan/post": {
+      },
       "post": {
         "tags": [
           "Kegiatan"
@@ -498,9 +485,7 @@
             }
           }
         }
-      }
-    },
-    "/api/kegiatan/v1Kegiatan/put": {
+      },
       "put": {
         "tags": [
           "Kegiatan"
@@ -548,7 +533,45 @@
         }
       }
     },
-    "/api/kegiatan/v1Kegiatan/delete/{id}": {
+    "/api/v1/kegiatan/{id}": {
+      "get": {
+        "tags": [
+          "Kegiatan"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetKegiatanResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetKegiatanResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetKegiatanResponse"
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Kegiatan"
@@ -588,7 +611,7 @@
         }
       }
     },
-    "/api/media/v1/Media/get/list": {
+    "/api/v1/media": {
       "get": {
         "tags": [
           "Media"
@@ -624,49 +647,7 @@
             }
           }
         }
-      }
-    },
-    "/api/media/v1/Media/get/{id}": {
-      "get": {
-        "tags": [
-          "Media"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetMediaResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetMediaResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetMediaResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/media/v1/Media/post": {
+      },
       "post": {
         "tags": [
           "Media"
@@ -715,9 +696,7 @@
             }
           }
         }
-      }
-    },
-    "/api/media/v1/Media/put": {
+      },
       "put": {
         "tags": [
           "Media"
@@ -765,7 +744,45 @@
         }
       }
     },
-    "/api/media/v1/Media/delete/{id}": {
+    "/api/v1/media/{id}": {
+      "get": {
+        "tags": [
+          "Media"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMediaResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMediaResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMediaResponse"
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Media"
@@ -851,9 +868,27 @@
           "createdAt": {
             "type": "string",
             "format": "date"
+          },
+          "status": {
+            "$ref": "#/components/schemas/BeritaStatus"
+          },
+          "authorId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
+      },
+      "BeritaStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "CreateBeritaRequest": {
         "type": "object",
@@ -875,6 +910,13 @@
             "nullable": true
           },
           "taglines": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/BeritaStatus"
+          },
+          "authorId": {
             "type": "string",
             "nullable": true
           }
@@ -942,6 +984,10 @@
             "nullable": true
           },
           "contentUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
             "type": "string",
             "nullable": true
           }
@@ -1061,6 +1107,10 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1148,6 +1198,13 @@
           "taglines": {
             "type": "string",
             "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/BeritaStatus"
+          },
+          "authorId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1221,6 +1278,10 @@
             "nullable": true
           },
           "contentUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
             "type": "string",
             "nullable": true
           }

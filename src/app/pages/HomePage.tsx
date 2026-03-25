@@ -39,11 +39,6 @@ export default function HomePage() {
         setLoading(true);
         const content = await mockApi.getPublicContent();
         const latest = content
-          .sort(
-            (a, b) =>
-              new Date(b.publishedAt || "").getTime() -
-              new Date(a.publishedAt || "").getTime(),
-          )
           .slice(0, 3);
         setLatestNews(latest);
       } catch (error) {

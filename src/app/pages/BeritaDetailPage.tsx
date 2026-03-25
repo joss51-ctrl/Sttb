@@ -3,7 +3,7 @@
  * Clean editorial design with narrow content width for optimal readability
  */
 
-import { Link, useParams } from 'react-router';
+import { Link, useParams } from 'react-router-dom';
 import { Calendar, User, ArrowLeft, ChevronRight } from 'lucide-react';
 import { Badge } from '../components/ui/badge';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';

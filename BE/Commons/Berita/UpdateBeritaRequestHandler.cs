@@ -29,7 +29,8 @@ public class UpdateBeritaRequestHandler :
         berita.ThumbnailUrl = request.ThumbnailUrl;
         berita.Category = request.Category;
         berita.Taglines = request.Taglines;
-
+        berita.Status = request.Status;
+        berita.AuthorId = request.AuthorId;
         await _db.SaveChangesAsync(cancellationToken);
 
         return true;

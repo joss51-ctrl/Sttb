@@ -25,6 +25,6 @@ public class Kegiatan
 
     [StringLength(50)]
     public string Status { get; set; } = string.Empty; // Ongoing, Finished, Expired
-    public string Location { get; set; }
-    public string Description { get; set; }
+    public string? Location { get; set; }
+    public string? Description { get; set; }
 }

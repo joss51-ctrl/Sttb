@@ -1,268 +1,8 @@
 [
   {
-    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
-    "Method": "Delete",
-    "RelativePath": "api/kegiatan/v1Kegiatan/delete/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
-    "Method": "Get",
-    "RelativePath": "api/kegiatan/v1Kegiatan/get/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "STTB_BE.Contracts.ResponseModels.Kegiatan.GetKegiatanResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
-    "Method": "List",
-    "RelativePath": "api/kegiatan/v1Kegiatan/list",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "STTB_BE.Contracts.RequestModels.Kegiatan.GetKegiatanListRequest",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "STTB_BE.Contracts.ResponseModels.Kegiatan.GetKegiatanListResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
-    "Method": "Create",
-    "RelativePath": "api/kegiatan/v1Kegiatan/post",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "STTB_BE.Contracts.RequestModels.Kegiatan.CreateKegiatanRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Guid",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
-    "Method": "Update",
-    "RelativePath": "api/kegiatan/v1Kegiatan/put",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "STTB_BE.Contracts.RequestModels.Kegiatan.UpdateKegiatanRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
-    "Method": "Delete",
-    "RelativePath": "api/media/v1/Media/delete/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
-    "Method": "Get",
-    "RelativePath": "api/media/v1/Media/get/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "STTB_BE.Contracts.ResponseModels.Media.GetMediaResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
-    "Method": "List",
-    "RelativePath": "api/media/v1/Media/get/list",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "STTB_BE.Contracts.RequestModels.Media.GetMediaListRequest",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "STTB_BE.Contracts.ResponseModels.Media.GetMediaListResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
-    "Method": "Create",
-    "RelativePath": "api/media/v1/Media/post",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "STTB_BE.Contracts.RequestModels.Media.CreateMediaRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Guid",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
-    "Method": "Update",
-    "RelativePath": "api/media/v1/Media/put",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "STTB_BE.Contracts.RequestModels.Media.UpdateMediaRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
     "Method": "TestDatabase",
-    "RelativePath": "api/v1/Auth/db-test",
+    "RelativePath": "api/v1/auth/db-test",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -272,7 +12,7 @@
   {
     "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/v1/Auth/login",
+    "RelativePath": "api/v1/auth/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -297,8 +37,28 @@
   },
   {
     "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
+    "Method": "Me",
+    "RelativePath": "api/v1/auth/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "STTB_BE.Contracts.ResponseModels.Auth.UserInfo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
     "Method": "Ping",
-    "RelativePath": "api/v1/Auth/ping",
+    "RelativePath": "api/v1/auth/ping",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -308,7 +68,7 @@
   {
     "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
     "Method": "Register",
-    "RelativePath": "api/v1/Auth/register",
+    "RelativePath": "api/v1/auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -334,7 +94,7 @@
   {
     "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
     "Method": "SeedUsers",
-    "RelativePath": "api/v1/Auth/seed-users",
+    "RelativePath": "api/v1/auth/seed-users",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -344,7 +104,7 @@
   {
     "ContainingType": "STTB_BE.WebAPI.Controllers.AuthController",
     "Method": "GetAllUsers",
-    "RelativePath": "api/v1/Auth/users",
+    "RelativePath": "api/v1/auth/users",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -464,6 +224,266 @@
     "ContainingType": "STTB_BE.WebAPI.Controllers.BeritaController",
     "Method": "Delete",
     "RelativePath": "api/v1/berita/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
+    "Method": "List",
+    "RelativePath": "api/v1/kegiatan",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "STTB_BE.Contracts.RequestModels.Kegiatan.GetKegiatanListRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "STTB_BE.Contracts.ResponseModels.Kegiatan.GetKegiatanListResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
+    "Method": "Create",
+    "RelativePath": "api/v1/kegiatan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "STTB_BE.Contracts.RequestModels.Kegiatan.CreateKegiatanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Guid",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
+    "Method": "Update",
+    "RelativePath": "api/v1/kegiatan",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "STTB_BE.Contracts.RequestModels.Kegiatan.UpdateKegiatanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
+    "Method": "Get",
+    "RelativePath": "api/v1/kegiatan/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "STTB_BE.Contracts.ResponseModels.Kegiatan.GetKegiatanResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.KegiatanController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/kegiatan/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
+    "Method": "List",
+    "RelativePath": "api/v1/media",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "STTB_BE.Contracts.RequestModels.Media.GetMediaListRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "STTB_BE.Contracts.ResponseModels.Media.GetMediaListResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
+    "Method": "Create",
+    "RelativePath": "api/v1/media",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "STTB_BE.Contracts.RequestModels.Media.CreateMediaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Guid",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
+    "Method": "Update",
+    "RelativePath": "api/v1/media",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "STTB_BE.Contracts.RequestModels.Media.UpdateMediaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
+    "Method": "Get",
+    "RelativePath": "api/v1/media/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "STTB_BE.Contracts.ResponseModels.Media.GetMediaResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "YourProject.WebAPI.Controllers.MediaController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/media/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

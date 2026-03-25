@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import {
@@ -10,29 +11,19 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
-import {
-  Home,
-  Calendar,
-  Newspaper,
-  Rocket,
-  TvMinimalPlay,
-  Search,
-  Menu,
-  X,
-  BookOpen,
-} from "lucide-react";
+
 export default function PublicHeader() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const topMenuItems = [
-    { label: "Beranda", href: "/", icon: Home },
-    { label: "Kegiatan", href: "/kegiatan", icon: Calendar },
-    { label: "Berita", href: "/berita", icon: Newspaper },
-    { label: "Media", href: "/media", icon: TvMinimalPlay },
-    { label: "LEAD", href: "/lead", icon: Rocket },
-    { label: "Perpustakaan", href: "/perpustakaan", icon: BookOpen },
+    { label: "Beranda", href: "/" },
+    { label: "Kegiatan", href: "/kegiatan" },
+    { label: "Berita", href: "/berita" },
+    { label: "Media", href: "/media" },
+    { label: "LEAD", href: "/lead" },
+    { label: "Perpustakaan", href: "/perpustakaan" },
   ];
 
   const handleSearch = (e: React.FormEvent) => {
@@ -419,7 +410,7 @@ export default function PublicHeader() {
               <Link to="/kontak-kami">
                 <Button
                   variant="ghost"
-                  className="text-sm font-semibold text-white bg-red-600 hover:bg-red-600/90 hover:text-white"
+                  className="text-sm font-semibold text-gray-700 hover:text-blue-700 hover:bg-blue-50 transition-all"
                 >
                   Kontak Kami
                 </Button>
@@ -428,7 +419,7 @@ export default function PublicHeader() {
               {/* Tombol Login (Dibuat lebih menonjol) */}
               <Link to="/login">
                 <Button className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-2 rounded-md shadow-sm transition-all active:scale-95">
-                  Login
+                  LOGIN
                 </Button>
               </Link>
             </div>

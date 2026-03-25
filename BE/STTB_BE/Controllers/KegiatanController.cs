@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using STTB_BE.Contracts.RequestModels.Kegiatan;
 using STTB_BE.Contracts.ResponseModels.Kegiatan;
@@ -6,7 +7,8 @@ using STTB_BE.Contracts.ResponseModels.Kegiatan;
 namespace YourProject.WebAPI.Controllers;
 
 [ApiController]
-[Route("api/kegiatan/v1[controller]")]
+[Route("api/v1/kegiatan")]
+
 public class KegiatanController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -16,7 +18,8 @@ public class KegiatanController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet("list")]
+    [HttpGet()]
+    [AllowAnonymous]
     public async Task<ActionResult<GetKegiatanListResponse>> List(
         [FromQuery] GetKegiatanListRequest request,
         CancellationToken cancellationToken)
@@ -25,7 +28,8 @@ public class KegiatanController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("get/{id}")]
+    [HttpGet("{id}")]
+    [AllowAnonymous]
     public async Task<ActionResult<GetKegiatanResponse>> Get(
         Guid id,
         CancellationToken cancellationToken)
@@ -36,7 +40,7 @@ public class KegiatanController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPost("post")]
+    [HttpPost()]
     public async Task<ActionResult<Guid>> Create(
         [FromBody] CreateKegiatanRequest request,
         CancellationToken cancellationToken)
@@ -45,7 +49,7 @@ public class KegiatanController : ControllerBase
         return Ok(id);
     }
 
-    [HttpPut("put")]
+    [HttpPut()]
     public async Task<ActionResult<bool>> Update(
         [FromBody] UpdateKegiatanRequest request,
         CancellationToken cancellationToken)
@@ -54,7 +58,7 @@ public class KegiatanController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("delete/{id}")]
+    [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete(
         Guid id,
         CancellationToken cancellationToken)

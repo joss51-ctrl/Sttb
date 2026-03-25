@@ -29,6 +29,7 @@ public class UpdateMediaRequestHandler :
         media.Title = request.Title;
         media.ThumbnailUrl = request.ThumbnailUrl;
         media.ContentUrl = request.ContentUrl;
+        media.Status = request.Status;
 
         await _db.SaveChangesAsync(cancellationToken);
 

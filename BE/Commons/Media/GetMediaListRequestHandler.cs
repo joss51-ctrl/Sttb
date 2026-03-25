@@ -33,7 +33,8 @@ public class GetMediaListRequestHandler :
                 Title = x.Title,
                 ThumbnailUrl = x.ThumbnailUrl,
                 ContentUrl = x.ContentUrl,
-                CreatedAt = x.CreatedAt
+                CreatedAt = x.CreatedAt,
+                Status = x.Status
             }).ToList()
         };
     }

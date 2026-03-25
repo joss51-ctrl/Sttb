@@ -36,7 +36,8 @@ public class GetKegiatanListRequestHandler
                 IsFeatured = x.IsFeatured,
                 Status = x.Status,
                 Location = x.Location,
-                Description = x.Description
+                Description = x.Description,
+
             }).ToList()
         };
     }

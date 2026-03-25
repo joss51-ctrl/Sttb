@@ -26,4 +26,5 @@ public class Media
     public string ContentUrl { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; }
+    public string Status { get; set; } = string.Empty;
 }

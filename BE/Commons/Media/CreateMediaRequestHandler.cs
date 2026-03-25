@@ -27,7 +27,8 @@ public class CreateMediaRequestHandler :
             Title = request.Title,
             ThumbnailUrl = request.ThumbnailUrl,
             ContentUrl = request.ContentUrl,
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+            Status = request.Status
         };
 
         _db.Medias.Add(media);

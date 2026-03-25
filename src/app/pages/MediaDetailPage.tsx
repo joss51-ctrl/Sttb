@@ -4,7 +4,7 @@
  */
 
 import { useRef } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useParams } from 'react-router-dom';
 import { Calendar, ArrowLeft } from 'lucide-react';
 
 // Mock media detail data

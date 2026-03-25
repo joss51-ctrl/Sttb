@@ -35,7 +35,9 @@ public class GetBeritaListRequestHandler :
                 ThumbnailUrl = p.ThumbnailUrl,
                 Category = p.Category,
                 Taglines = p.Taglines,
-                CreatedAt = p.CreatedAt
+                CreatedAt = p.CreatedAt,
+                Status = p.Status,
+                AuthorId = p.AuthorId
             }).ToList()
         };
     }
