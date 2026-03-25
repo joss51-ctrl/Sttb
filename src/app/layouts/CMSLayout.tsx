@@ -7,10 +7,14 @@ import {
   Settings,
   LogOut,
   Menu,
-  X
+  X,
+  Calendar
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { useState } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 
 /**
  * CMSLayout - Layout wrapper for CMS admin pages
@@ -18,12 +22,15 @@ import { useState } from 'react';
  * Follows enterprise-grade CMS design patterns with role-based access
  */
 export default function CMSLayout() {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const navigation = [
     { name: 'Dashboard', href: '/cms', icon: LayoutDashboard },
-    { name: 'Content', href: '/cms/berita', icon: FileText },
+    { name: 'Berita', href: '/cms/berita', icon: FileText },
+    { name: 'Kegiatan', href: '/cms/kegiatan', icon: FileText },
     { name: 'Media', href: '/cms/media', icon: Image },
     { name: 'Users', href: '/cms/users', icon: Users },
     { name: 'Settings', href: '/cms/settings', icon: Settings },
@@ -72,13 +79,16 @@ export default function CMSLayout() {
         </nav>
 
         <div className="p-4 border-t border-gray-800">
-          <Link
-            to="/login"
-            className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-colors"
+          <button
+            onClick={() => {
+              logout();
+              navigate('/login');
+            }}
+            className="w-full flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-colors"
           >
             <LogOut className="w-5 h-5" />
             <span className="font-medium">Logout</span>
-          </Link>
+</button>
         </div>
       </aside>
 

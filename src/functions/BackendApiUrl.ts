@@ -15,8 +15,11 @@ export const BackendApiUrl = {
   mediaUpload: `${baseUrl}/media/upload`,
 
   // Users
+  // Users endpoints
   users: `${baseUrl}/users`,
   user: (id: string) => `${baseUrl}/users/${id}`,
+  userRoles: `${baseUrl}/users/roles`,
+  updateUserStatus: (id: string) => `${baseUrl}/users/${id}/status`,
 
   // Auth
   login: `${baseUrl}/auth/login`,

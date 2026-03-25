@@ -1,44 +1,40 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { useFetchWithAccessToken } from '../functions/useFetchWithAccessToken';
-import type { UserRole } from '../types';
+import { createContext, useContext, useMemo, ReactNode } from 'react';
+import { useAuth } from './AuthContext';
+
+export type UserRole = 'Super Admin' | 'Content Admin' | 'Editor' | 'Approver';
 
 interface PermissionContextType {
-  user: { id: string; fullName: string; role: UserRole } | null;
+  userRole: UserRole | null;
   hasPermission: (requiredRole: UserRole | UserRole[]) => boolean;
-  loading: boolean;
 }
 
 const PermissionContext = createContext<PermissionContextType | undefined>(undefined);
 
-export function PermissionProvider({ children }: { children: React.ReactNode }) {
-  const { fetchGET } = useFetchWithAccessToken();
-  const [user, setUser] = useState<PermissionContextType['user']>(null);
-  const [loading, setLoading] = useState(true);
+export const PermissionProvider = ({ children }: { children: ReactNode }) => {
+  const { user } = useAuth();
 
-  useEffect(() => {
-    const fetchMe = async () => {
-      const { data, error } = await fetchGET<{ id: string; fullName: string; role: UserRole }>('/api/auth/me');
-      if (!error && data) setUser(data);
-      setLoading(false);
-    };
-    fetchMe();
-  }, []);
+  const userRole = useMemo(() => {
+    if (!user?.role) return null;
+    return user.role as UserRole;
+  }, [user]);
 
-  const hasPermission = (requiredRole: UserRole | UserRole[]) => {
-    if (!user) return false;
+  const hasPermission = (requiredRole: UserRole | UserRole[]): boolean => {
+    if (!userRole) return false;
     const roles = Array.isArray(requiredRole) ? requiredRole : [requiredRole];
-    return roles.includes(user.role);
+    return roles.includes(userRole);
   };
 
   return (
-    <PermissionContext.Provider value={{ user, hasPermission, loading }}>
+    <PermissionContext.Provider value={{ userRole, hasPermission }}>
       {children}
     </PermissionContext.Provider>
   );
-}
+};
 
 export const usePermissions = () => {
-  const ctx = useContext(PermissionContext);
-  if (!ctx) throw new Error('usePermissions must be used within PermissionProvider');
-  return ctx;
+  const context = useContext(PermissionContext);
+  if (!context) {
+    throw new Error('usePermissions must be used within a PermissionProvider');
+  }
+  return context;
 };

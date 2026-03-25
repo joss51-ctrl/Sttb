@@ -1,8 +1,12 @@
-﻿using MediatR;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using STTB_BE.Contracts.RequestModels.Auth;
 using STTB_BE.Contracts.ResponseModels.Auth;
 using STTB_BE.Entities;
@@ -10,42 +14,46 @@ using STTB_BE.Entities;
 namespace STTB_BE.WebAPI.Controllers;
 
 [ApiController]
-[Route("api/v1/[controller]")]
+[Route("api/v1/auth")]
+
 public class AuthController : ControllerBase
 {
     private readonly IMediator _mediator;
     private readonly UserManager<User> _userManager;
     private readonly RoleManager<Role> _roleManager;
     private readonly ILogger<AuthController> _logger;
+    private readonly IConfiguration _configuration;
 
     public AuthController(
         IMediator mediator,
         UserManager<User> userManager,
         RoleManager<Role> roleManager,
-        ILogger<AuthController> logger)
+        ILogger<AuthController> logger,
+        IConfiguration configuration)
     {
         _mediator = mediator;
         _userManager = userManager;
         _roleManager = roleManager;
         _logger = logger;
+        _configuration = configuration;
     }
 
     [HttpPost("login")]
+    [AllowAnonymous]
     public async Task<ActionResult<LoginResponse>> Login(
-        [FromBody] LoginRequest request,
-        CancellationToken cancellationToken)
+    [FromBody] LoginRequest request,
+    CancellationToken cancellationToken)
     {
         try
         {
-            var result = await _mediator.Send(request, cancellationToken);
-            return Ok(result);
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
         }
         catch (UnauthorizedAccessException ex)
         {
             return Unauthorized(new { message = ex.Message });
         }
     }
-
     [HttpPost("register")]
     [Authorize(Policy = "SuperAdminOnly")]
     public async Task<ActionResult<LoginResponse>> Register(
@@ -63,13 +71,44 @@ public class AuthController : ControllerBase
         }
     }
 
+    [HttpGet("me")]
+    [Authorize]
+    public async Task<ActionResult<UserInfo>> Me()
+    {
+        _logger.LogInformation("--- All claims in the token ---");
+        foreach (var claim in User.Claims)
+        {
+            _logger.LogInformation("Claim type: {Type}, value: {Value}", claim.Type, claim.Value);
+        }
+        _logger.LogInformation("--------------------------------");
+
+        var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        _logger.LogInformation("NameIdentifier claim value: {UserIdClaim}", userIdClaim);
+        if (string.IsNullOrEmpty(userIdClaim))
+            return Unauthorized(new { message = "Invalid token" });
+
+        if (!Guid.TryParse(userIdClaim, out var userId))
+            return Unauthorized(new { message = "Invalid user ID format" });
+
+        var user = await _userManager.FindByIdAsync(userId.ToString());
+        if (user == null)
+            return NotFound(new { message = "User not found" });
+
+        return Ok(new UserInfo
+        {
+            Id = user.Id,
+            Email = user.Email ?? "",
+            FullName = user.FullName ?? "",
+            Role = user.Role ?? "Editor"
+        });
+    }
+
     [HttpGet("db-test")]
     [AllowAnonymous]
     public async Task<IActionResult> TestDatabase()
     {
         try
         {
-            // Use the injected UserManager and RoleManager
             var userCount = await _userManager.Users.CountAsync();
             var roleCount = await _roleManager.Roles.CountAsync();
             var firstUser = await _userManager.Users.FirstOrDefaultAsync();
@@ -215,8 +254,37 @@ public class AuthController : ControllerBase
                 "GET /db-test",
                 "POST /seed-users",
                 "GET /users",
+                "GET /me",
                 "GET /ping"
             }
         });
+    }
+
+    private string GenerateJwtToken(User user)
+    {
+        // Get secret key from configuration (appsettings.json)
+        var secretKey = _configuration["Jwt:SecretKey"] ?? "your-default-secret-key-at-least-32-characters";
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+        // Create claims with null checks
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.Email ?? ""),
+            new Claim(ClaimTypes.Name, user.FullName ?? user.UserName ?? ""),
+            new Claim(ClaimTypes.Role, user.Role ?? "Editor")
+        };
+
+        // Create token
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"] ?? "STTB_API",
+            audience: _configuration["Jwt:Audience"] ?? "STTB_Client",
+            claims: claims,
+            expires: DateTime.UtcNow.AddHours(8),
+            signingCredentials: credentials
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

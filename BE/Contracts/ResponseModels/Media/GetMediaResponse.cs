@@ -15,4 +15,5 @@ public class GetMediaResponse
     public string ContentUrl { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; }
+    public string Status { get; set; }
 }

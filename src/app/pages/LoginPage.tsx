@@ -1,23 +1,24 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
 
-/**
- * LoginPage - Login page to access CMS
- * In production, this would integrate with OAuth/OIDC authentication
- */
 export default function LoginPage() {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock login - in production, this would authenticate with backend
-    if (email && password) {
+    setIsLoading(true);
+    const success = await login(email, password);
+    setIsLoading(false);
+    if (success) {
       navigate('/cms');
     }
   };
@@ -55,13 +56,10 @@ export default function LoginPage() {
                 required
               />
             </div>
-            <Button type="submit" className="w-full">
-              Login
+            <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? 'Logging in...' : 'Login'}
             </Button>
           </form>
-          <p className="text-xs text-gray-500 mt-4 text-center">
-            Demo: Use any email and password to login
-          </p>
         </CardContent>
       </Card>
     </div>

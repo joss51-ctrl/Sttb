@@ -184,7 +184,6 @@ namespace Entities.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("EndDateTime")
@@ -194,7 +193,6 @@ namespace Entities.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Location")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Organizer")
@@ -238,6 +236,10 @@ namespace Entities.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ThumbnailUrl")
                         .IsRequired()

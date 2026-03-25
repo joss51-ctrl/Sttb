@@ -9,7 +9,7 @@ namespace STTB_BE.WebAPI.Controllers;
 
 [ApiController]
 [Route("api/v1/berita")]  // Fixed route - removed [controller] duplication
-[AllowAnonymous]
+
 public class BeritaController : ControllerBase
 {
     private readonly IMediator _mediator;

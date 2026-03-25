@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using STTB_BE.Contracts.RequestModels.Media;
 using STTB_BE.Contracts.ResponseModels.Media;
@@ -7,7 +8,8 @@ using STTB_BE.Contracts.ResponseModels.Media;
 namespace YourProject.WebAPI.Controllers;
 
 [ApiController]
-[Route("api/media/v1/[controller]")]
+[Route("api/v1/media")]
+
 public class MediaController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -17,7 +19,7 @@ public class MediaController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet("get/list")]
+    [HttpGet()]
     public async Task<ActionResult<GetMediaListResponse>> List(
         [FromQuery] GetMediaListRequest request,
         CancellationToken cancellationToken)
@@ -26,7 +28,7 @@ public class MediaController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("get/{id}")]
+    [HttpGet("{id}")]
     public async Task<ActionResult<GetMediaResponse>> Get(
         Guid id,
         CancellationToken cancellationToken)
@@ -37,7 +39,7 @@ public class MediaController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPost("post")]
+    [HttpPost()]
     public async Task<ActionResult<Guid>> Create(
         [FromBody] CreateMediaRequest request,
         CancellationToken cancellationToken)
@@ -46,7 +48,7 @@ public class MediaController : ControllerBase
         return Ok(id);
     }
 
-    [HttpPut("put")]
+    [HttpPut()]
     public async Task<ActionResult<bool>> Update(
         [FromBody] UpdateMediaRequest request,
         CancellationToken cancellationToken)
@@ -55,7 +57,7 @@ public class MediaController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("delete/{id}")]
+    [HttpDelete("{id}")]
     public async Task<ActionResult<bool>> Delete(
         Guid id,
         CancellationToken cancellationToken)

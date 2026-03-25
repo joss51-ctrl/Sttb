@@ -15,4 +15,5 @@ public class UpdateMediaRequest : IRequest<bool>
     public string ThumbnailUrl { get; set; } = string.Empty;
 
     public string ContentUrl { get; set; } = string.Empty;
+    public string Status {  get; set; } 
 }

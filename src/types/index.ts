@@ -53,8 +53,8 @@ export interface Media {
   formatMedia: MediaFormat;
   topikKategori: string;
   title: string;
-  thumbnailUrl: string;
-  contentUrl: string; // URL to video or article
+  thumbnailUrl?: string;   // optional
+  contentUrl: string;
   createdAt: Date;
   status?: ContentStatus;
 }

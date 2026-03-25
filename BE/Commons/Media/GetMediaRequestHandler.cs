@@ -34,7 +34,8 @@ public class GetMediaRequestHandler :
             Title = media.Title,
             ThumbnailUrl = media.ThumbnailUrl,
             ContentUrl = media.ContentUrl,
-            CreatedAt = media.CreatedAt
+            CreatedAt = media.CreatedAt,
+            Status = media.Status,
         };
     }
 }

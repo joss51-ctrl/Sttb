@@ -5,8 +5,8 @@ import { useBerita } from '@/app/components/cms/berita/hooks/useBerita';
 
 import { DataTable } from '@/app/components/shared/DataTable';
 
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '@/app/components/ui/button';
+import { Input } from '@/app/components/ui/input';
 import {
   Select,
   SelectContent,
