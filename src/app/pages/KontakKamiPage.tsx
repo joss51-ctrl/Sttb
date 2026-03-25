@@ -391,52 +391,6 @@ export default function KontakKamiPage() {
           </div>
         </div>
       </section>
-
-      {/* Social Media & Additional Info */}
-      <section className="py-16 bg-blue-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">
-            Ikuti Kami di Media Sosial
-          </h3>
-          <p className="text-blue-200 mb-8 max-w-2xl mx-auto" style={{ lineHeight: '1.6' }}>
-            Dapatkan update terbaru tentang kegiatan, berita, dan informasi penting dari STTB
-          </p>
-          <div className="flex justify-center gap-6 flex-wrap">
-            <a
-              href="https://facebook.com/sttb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Facebook
-            </a>
-            <a
-              href="https://instagram.com/sttb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://youtube.com/sttb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              YouTube
-            </a>
-            <a
-              href="https://twitter.com/sttb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Twitter
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

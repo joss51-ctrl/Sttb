@@ -16,11 +16,6 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 
-/**
- * CMSLayout - Layout wrapper for CMS admin pages
- * Features sidebar navigation, top bar with user info, and main content area
- * Follows enterprise-grade CMS design patterns with role-based access
- */
 export default function CMSLayout() {
   const { logout } = useAuth();
   const navigate = useNavigate();

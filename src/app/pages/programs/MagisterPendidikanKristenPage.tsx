@@ -48,9 +48,6 @@ export default function MagisterPendidikanKristenPage() {
     <div className="bg-white">
       <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-blue-200 mb-6">
-            <a href="/" className="hover:text-white transition-colors">Beranda</a><ChevronRight className="w-4 h-4" /><a href="#" className="hover:text-white transition-colors">Akademik</a><ChevronRight className="w-4 h-4" /><span className="text-white">Magister Pendidikan Kristen</span>
-          </div>
           <h1 className="text-3xl lg:text-4xl font-bold mb-2">Magister Pendidikan Kristen</h1>
           <p className="text-xl text-blue-100 mb-2">M.Pd.K. (Strata 2)</p>
           <p className="text-lg text-blue-100 max-w-3xl">Program pascasarjana untuk mengembangkan kepemimpinan dan keahlian dalam pendidikan Kristen</p>

@@ -1,337 +1,286 @@
-/**
- * BeritaPage - News List Page
- * Clean editorial design with featured hero and 3-column grid
- */
+import React, { useState } from "react";
+import { Calendar, ArrowRight, Hash, ChevronDown, Tag } from "lucide-react";
+import { Link } from "react-router-dom";
 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, ChevronRight } from 'lucide-react';
-import { Badge } from '../components/ui/badge';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '../components/ui/select';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+const BeritaHomePage = () => {
+  const [activeCategory, setActiveCategory] = useState("Semua");
+  const [activeTag, setActiveTag] = useState("Semua");
+  const [activeArchive, setActiveArchive] = useState("Semua Waktu");
+  
+  // State untuk mengontrol dropdown mana yang terbuka
+  const [openDropdown, setOpenDropdown] = useState<null | 'archive' | 'tag'>(null);
 
-// News Article type
-interface NewsArticle {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  image: string;
-  author: string;
-  isFeatured?: boolean;
-}
+  const categories = ["Semua", "Civitas", "Akademik", "Kemahasiswaan", "Institusi", "Alumni"];
+  const tags = ["Semua", "Paskah", "STTB", "Seminar", "Beasiswa", "Workshop", "Dosen", "Inovasi", "Internasional"];
+  const archives = ["Maret 2026", "Februari 2026", "Januari 2026", "Semua Waktu"];
 
-// Mock news data
-const mockNews: NewsArticle[] = [
-  {
-    id: '1',
-    title: 'STTB Meraih Akreditasi A dari BAN-PT',
-    slug: 'sttb-meraih-akreditasi-a',
-    excerpt: 'Sekolah Tinggi Teologi Bandung berhasil meraih akreditasi A dari Badan Akreditasi Nasional Perguruan Tinggi untuk seluruh program studi.',
-    date: '2026-03-10',
-    category: 'Akademik',
-    image: 'https://images.unsplash.com/photo-1738949538943-e54722a44ffc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwZ3JhZHVhdGlvbiUyMGNlcmVtb255fGVufDF8fHx8MTc3MzI1NTM5M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Tim Redaksi',
-    isFeatured: true,
-  },
-  {
-    id: '2',
-    title: 'Seminar Nasional Teologi Transformatif 2026',
-    slug: 'seminar-nasional-teologi-transformatif',
-    excerpt: 'STTB mengadakan seminar nasional dengan tema "Teologi untuk Transformasi Sosial" yang dihadiri ratusan peserta dari seluruh Indonesia.',
-    date: '2026-03-08',
-    category: 'Kegiatan',
-    image: 'https://images.unsplash.com/photo-1760420940953-3958ad9f6287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2UlMjBzZW1pbmFyfGVufDF8fHx8MTc3MzE1NTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Dr. Paulus Gunawan',
-  },
-  {
-    id: '3',
-    title: 'Mahasiswa STTB Menjuarai Kompetisi Debat Teologi',
-    slug: 'mahasiswa-menjuarai-kompetisi-debat',
-    excerpt: 'Tim debat STTB berhasil meraih juara pertama dalam Kompetisi Debat Teologi Tingkat Nasional yang diselenggarakan di Jakarta.',
-    date: '2026-03-05',
-    category: 'Kemahasiswaan',
-    image: 'https://images.unsplash.com/photo-1758270705518-b61b40527e76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGRpc2N1c3Npb24lMjBncm91cHxlbnwxfHx8fDE3NzMyNTUzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Humas STTB',
-  },
-  {
-    id: '4',
-    title: 'Peluncuran Program Beasiswa Penuh untuk Mahasiswa Berprestasi',
-    slug: 'peluncuran-program-beasiswa',
-    excerpt: 'STTB meluncurkan program beasiswa penuh untuk mahasiswa berprestasi yang berasal dari keluarga kurang mampu.',
-    date: '2026-03-01',
-    category: 'Pengumuman',
-    image: 'https://images.unsplash.com/photo-1711843250811-a7d0bb485a42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVvbG9naWNhbCUyMHNlbWluYXJ5JTIwc3R1ZGVudHMlMjBzdHVkeWluZ3xlbnwxfHx8fDE3NzMyNTUzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Bagian Keuangan',
-  },
-  {
-    id: '5',
-    title: 'Ibadah Kebangunan Rohani di Kampus STTB',
-    slug: 'ibadah-kebangunan-rohani',
-    excerpt: 'Kebaktian kebangunan rohani yang diadakan selama 3 hari menghadirkan ratusan mahasiswa dan dosen untuk memperdalam iman.',
-    date: '2026-02-25',
-    category: 'Rohani',
-    image: 'https://images.unsplash.com/photo-1760367120345-2b96c53de838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHJpc3RpYW4lMjB3b3JzaGlwJTIwY2h1cmNoJTIwZXZlbnR8ZW58MXx8fHwxNzczMjU1MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Tim Pembinaan',
-  },
-  {
-    id: '6',
-    title: 'Bakti Sosial Mahasiswa di Desa Terpencil',
-    slug: 'bakti-sosial-mahasiswa',
-    excerpt: 'Mahasiswa STTB mengadakan kegiatan bakti sosial di desa terpencil dengan memberikan bantuan pendidikan dan kesehatan.',
-    date: '2026-02-20',
-    category: 'Kemahasiswaan',
-    image: 'https://images.unsplash.com/photo-1762013728402-69cff78f29fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjb21tdW5pdHklMjBzZXJ2aWNlfGVufDF8fHx8MTc3MzI1NTM5NHww&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Senat Mahasiswa',
-  },
-  {
-    id: '7',
-    title: 'Kerjasama STTB dengan Universitas di Luar Negeri',
-    slug: 'kerjasama-universitas-luar-negeri',
-    excerpt: 'STTB menandatangani MoU dengan beberapa universitas teologi ternama di Eropa dan Amerika untuk program pertukaran mahasiswa.',
-    date: '2026-02-15',
-    category: 'Akademik',
-    image: 'https://images.unsplash.com/photo-1711843250811-a7d0bb485a42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVvbG9naWNhbCUyMHNlbWluYXJ5JTIwc3R1ZGVudHMlMjBzdHVkeWluZ3xlbnwxfHx8fDE3NzMyNTUzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    author: 'Dr. Elisabeth Chen',
-  },
-];
+  const newsData = [
+    {
+      id: 1,
+      category: "Civitas",
+      tag: "Seminar",
+      title: "Seminar Teologi Transformatif 2026: Menjawab Tantangan Zaman",
+      publishedAt: "2026-03-15",
+      excerpt: "Seminar tahunan ini menghadirkan pembicara internasional untuk membahas peran teologi dalam masyarakat urban modern...",
+      featuredImage: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800",
+    },
+    {
+      id: 2,
+      category: "Kemahasiswaan",
+      tag: "Beasiswa",
+      title: "Penerimaan Mahasiswa Baru Gelombang 2 Telah Dibuka",
+      publishedAt: "2026-03-10",
+      excerpt: "Bergabunglah bersama komunitas pembelajar yang transformatif. Dapatkan beasiswa khusus bagi aktivis gereja...",
+      featuredImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800",
+    },
+    {
+      id: 3,
+      category: "Institusi",
+      tag: "STTB",
+      title: "STTB Menjalin Kerja Sama Internasional dengan University of Oxford",
+      publishedAt: "2026-02-28",
+      excerpt: "Kolaborasi ini mencakup pertukaran pelajar dan riset bersama dalam bidang studi biblika dan etika Kristen...",
+      featuredImage: "https://images.unsplash.com/photo-1541339907198-e0875ebafe3?q=80&w=800",
+    },
+  ];
 
-// Category colors
-const categoryColors: { [key: string]: string } = {
-  Akademik: 'bg-blue-100 text-blue-700 border-blue-200',
-  Kegiatan: 'bg-purple-100 text-purple-700 border-purple-200',
-  Kemahasiswaan: 'bg-green-100 text-green-700 border-green-200',
-  Pengumuman: 'bg-orange-100 text-orange-700 border-orange-200',
-  Rohani: 'bg-red-100 text-red-700 border-red-200',
-};
+  const featuredTop = newsData[0];
+  const sideTop = newsData.slice(1, 3);
 
-export default function BeritaPage() {
-  // State
-  const [categoryFilter, setCategoryFilter] = useState<string>('all');
-  const [archiveFilter, setArchiveFilter] = useState<string>('all');
+  const filteredAllNews = newsData.filter((item) => {
+    const matchCat = activeCategory === "Semua" || item.category === activeCategory;
+    const matchTag = activeTag === "Semua" || item.tag === activeTag;
+    return matchCat && matchTag;
+  });
 
-  // Get unique categories
-  const categories = Array.from(new Set(mockNews.map(n => n.category)));
-
-  // Get unique months for archive
-  const archives = Array.from(new Set(mockNews.map(n => {
-    const date = new Date(n.date);
-    return `${date.toLocaleString('id-ID', { month: 'long', year: 'numeric' })}`;
-  })));
-
-  // Featured news (first item with isFeatured flag)
-  const featuredNews = mockNews.find(n => n.isFeatured) || mockNews[0];
-
-  // Filter news (exclude featured)
-  const filteredNews = mockNews
-    .filter(n => n.id !== featuredNews.id)
-    .filter(news => {
-      const matchesCategory = categoryFilter === 'all' || news.category === categoryFilter;
-      
-      if (archiveFilter === 'all') return matchesCategory;
-      
-      const newsMonth = new Date(news.date).toLocaleString('id-ID', { month: 'long', year: 'numeric' });
-      const matchesArchive = newsMonth === archiveFilter;
-      
-      return matchesCategory && matchesArchive;
-    });
-
-  // Format date
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('id-ID', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    });
+  // Fungsi toggle dropdown agar tidak terbuka bersamaan
+  const toggleDropdown = (name: 'archive' | 'tag') => {
+    setOpenDropdown(openDropdown === name ? null : name);
   };
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Featured News Hero */}
-      <section className="relative h-[500px] overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img
-            src={featuredNews.image}
-            alt={featuredNews.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        </div>
+      
+      {/* SECTION 1: BERITA TERKINI */}
+      <section className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+            <div className="text-left">
+              <h2 className="text-4xl font-extrabold text-blue-950 mb-4 leading-tight uppercase tracking-tighter">
+                Berita & Kegiatan <span className="text-red-600">Terkini</span>
+              </h2>
+              <div className="h-1.5 w-20 bg-red-600 rounded-full"></div>
+            </div>
+          </div>
 
-        {/* Text Overlay */}
-        <div className="relative h-full flex items-end">
-          <div className="container mx-auto px-4 pb-16">
-            <div className="max-w-3xl">
-              <Badge 
-                variant="outline" 
-                className="bg-white/90 text-blue-900 border-white mb-4 font-semibold"
-              >
-                Berita Utama
-              </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                {featuredNews.title}
-              </h1>
-              <p className="text-xl text-white/90 mb-4 leading-relaxed">
-                {featuredNews.excerpt}
-              </p>
-              <div className="flex items-center gap-4 text-white/80 mb-6">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>{formatDate(featuredNews.date)}</span>
-                </div>
-                <span>•</span>
-                <span>{featuredNews.category}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <article className="lg:col-span-2 group bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <div className="relative aspect-[16/8] overflow-hidden">
+                <img
+                  src={featuredTop.featuredImage}
+                  alt={featuredTop.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
-              <Link
-                to={`/berita/${featuredNews.slug}`}
-                className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Baca Selengkapnya
-                <ChevronRight className="w-5 h-5" />
-              </Link>
+              <div className="p-8">
+                <div className="flex items-center gap-3 text-gray-400 text-xs font-bold uppercase tracking-widest mb-4">
+                  <Calendar className="w-4 h-4 text-red-600" />
+                  {new Date(featuredTop.publishedAt).toLocaleDateString("id-ID", { year: "numeric", month: "long", day: "numeric" })}
+                </div>
+                <h3 className="text-3xl font-black text-blue-950 mb-4 group-hover:text-red-600 transition leading-tight uppercase tracking-tighter">
+                  {featuredTop.title}
+                </h3>
+                <p className="text-gray-500 mb-6 text-sm leading-relaxed">{featuredTop.excerpt}</p>
+                <Link to={`/berita/${featuredTop.id}`} className="text-red-600 font-black flex items-center gap-2 uppercase text-xs tracking-widest border-b-2 border-red-50 w-fit pb-1 hover:border-red-600 transition-all">
+                  Baca Selengkapnya <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </article>
+
+            <div className="flex flex-col gap-8">
+              {sideTop.map((item) => (
+                <article key={item.id} className="flex gap-5 items-start group border-b border-gray-100 pb-6 last:border-0">
+                  <img
+                    src={item.featuredImage}
+                    alt={item.title}
+                    className="w-28 h-24 object-cover rounded-2xl flex-shrink-0 shadow-md group-hover:scale-105 transition-transform"
+                  />
+                  <div>
+                    <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest">{item.category}</span>
+                    <h4 className="font-bold text-blue-950 text-sm group-hover:text-red-600 transition line-clamp-2 mt-1 uppercase leading-snug">
+                      {item.title}
+                    </h4>
+                    <Link to={`/berita/${item.id}`} className="text-red-600 text-[10px] font-black mt-2 inline-flex items-center gap-1 uppercase tracking-widest">
+                      Detail <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Main News Grid */}
-            <main className="flex-1">
-              {/* Filter Bar */}
-              <div className="bg-white rounded-xl p-6 shadow-sm mb-8 border border-gray-200">
-                <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
-                  {/* Archive Dropdown */}
-                  <div className="flex items-center gap-3">
-                    <label className="text-sm font-semibold text-gray-700">Arsip Berita:</label>
-                    <Select value={archiveFilter} onValueChange={setArchiveFilter}>
-                      <SelectTrigger className="w-[200px]">
-                        <SelectValue placeholder="Pilih Bulan" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">Semua Waktu</SelectItem>
-                        {archives.map((archive) => (
-                          <SelectItem key={archive} value={archive}>
-                            {archive}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
+      {/* SECTION 2: SEARCH & FILTER BAR */}
+      <section className="sticky top-0 z-40 bg-white border-y border-slate-100 shadow-sm py-6 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            
+            {/* Kategori Pills */}
+            <div className="flex flex-wrap justify-center gap-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-5 py-2 rounded-full text-[11px] font-bold transition-all border ${
+                    activeCategory === cat
+                      ? "bg-blue-950 border-blue-950 text-white shadow-lg"
+                      : "bg-slate-50 border-slate-100 text-slate-500 hover:border-red-600"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
 
-                  {/* Clear Filter */}
-                  {(categoryFilter !== 'all' || archiveFilter !== 'all') && (
-                    <button
-                      onClick={() => {
-                        setCategoryFilter('all');
-                        setArchiveFilter('all');
-                      }}
-                      className="text-sm text-red-700 hover:text-red-800 font-semibold"
-                    >
-                      Reset Filter
-                    </button>
-                  )}
-                </div>
-              </div>
-
-              {/* Category Chips/Tags */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-700 mb-3">Kategori:</h3>
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    onClick={() => setCategoryFilter('all')}
-                    className={`px-4 py-2 rounded-full font-semibold text-sm transition-all ${
-                      categoryFilter === 'all'
-                        ? 'bg-blue-900 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
-                    }`}
-                  >
-                    Semua
-                  </button>
-                  {categories.map((category) => (
-                    <button
-                      key={category}
-                      onClick={() => setCategoryFilter(category)}
-                      className={`px-4 py-2 rounded-full font-semibold text-sm transition-all ${
-                        categoryFilter === category
-                          ? 'bg-blue-900 text-white'
-                          : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* News Grid - 3 Columns */}
-              {filteredNews.length === 0 ? (
-                <div className="text-center py-16">
-                  <p className="text-gray-500 text-lg">Tidak ada berita yang sesuai filter</p>
-                </div>
-              ) : (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {filteredNews.map((news) => (
-                    <Link
-                      key={news.id}
-                      to={`/berita/${news.slug}`}
-                      className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
-                    >
-                      {/* 16:9 Image */}
-                      <div className="aspect-video overflow-hidden bg-gray-100">
-                        <img
-                          src={news.image}
-                          alt={news.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-
-                      {/* Card Content */}
-                      <div className="p-6">
-                        {/* Date Tag */}
-                        <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(news.date)}</span>
-                        </div>
-
-                        {/* Title - Bold Navy */}
-                        <h3 className="text-xl font-bold text-blue-900 mb-3 leading-tight group-hover:text-red-700 transition-colors">
-                          {news.title}
-                        </h3>
-
-                        {/* 2-line Excerpt */}
-                        <p className="text-gray-600 mb-4 line-clamp-2" style={{ lineHeight: '1.6' }}>
-                          {news.excerpt}
-                        </p>
-
-                        {/* Category Badge */}
-                        <Badge
-                          variant="outline"
-                          className={`font-semibold ${categoryColors[news.category] || 'bg-gray-100 text-gray-700'}`}
+            {/* Dropdown Group */}
+            <div className="flex items-center gap-3">
+              
+              {/* Dropdown Tags */}
+              <div className="relative">
+                <button 
+                  onClick={() => toggleDropdown('tag')}
+                  className={`flex items-center gap-3 px-5 py-2 border rounded-xl text-[11px] font-bold transition-all ${
+                    activeTag !== "Semua" ? "border-red-600 text-red-600 bg-red-50" : "bg-slate-50 border-slate-200 text-slate-700 hover:border-blue-900"
+                  }`}
+                >
+                  <Tag className="w-3.5 h-3.5" />
+                  {activeTag === "Semua" ? "Pilih Tag" : activeTag}
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openDropdown === 'tag' ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {openDropdown === 'tag' && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white border border-slate-100 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                    <div className="max-h-60 overflow-y-auto">
+                      {tags.map((tag) => (
+                        <button
+                          key={tag}
+                          onClick={() => { setActiveTag(tag); setOpenDropdown(null); }}
+                          className={`w-full text-left px-5 py-3 text-[11px] font-bold transition-colors border-b border-slate-50 last:border-0 flex items-center gap-2 ${
+                            activeTag === tag ? "bg-red-50 text-red-600" : "hover:bg-slate-50 text-slate-700"
+                          }`}
                         >
-                          {news.category}
-                        </Badge>
-                      </div>
+                          <Hash size={12} className={activeTag === tag ? "text-red-600" : "text-slate-300"} />
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Dropdown Archive */}
+              <div className="relative">
+                <button 
+                  onClick={() => toggleDropdown('archive')}
+                  className={`flex items-center gap-3 px-5 py-2 border rounded-xl text-[11px] font-bold transition-all ${
+                    activeArchive !== "Semua Waktu" ? "border-red-600 text-red-600 bg-red-50" : "bg-slate-50 border-slate-200 text-slate-700 hover:border-red-600"
+                  }`}
+                >
+                  <Calendar className="w-3.5 h-3.5" />
+                  {activeArchive}
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openDropdown === 'archive' ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {openDropdown === 'archive' && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white border border-slate-100 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                    {archives.map((month) => (
+                      <button
+                        key={month}
+                        onClick={() => { setActiveArchive(month); setOpenDropdown(null); }}
+                        className={`w-full text-left px-5 py-3 text-[11px] font-bold transition-colors border-b border-slate-50 last:border-0 ${
+                            activeArchive === month ? "bg-red-50 text-red-600" : "hover:bg-slate-50 text-slate-700"
+                          }`}
+                      >
+                        {month}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: SEMUA BERITA */}
+      <section className="py-20 px-4 bg-slate-50/30">
+        <div className="container mx-auto max-w-7xl">
+          {/* Header Status Filter jika aktif */}
+          {(activeCategory !== "Semua" || activeTag !== "Semua" || activeArchive !== "Semua Waktu") && (
+            <div className="mb-8 flex items-center justify-between">
+              <p className="text-sm text-slate-500">
+                Menampilkan hasil untuk: 
+                <span className="font-bold text-blue-950 ml-1">
+                  {activeCategory !== "Semua" && `${activeCategory}`}
+                  {activeTag !== "Semua" && ` • #${activeTag}`}
+                  {activeArchive !== "Semua Waktu" && ` • ${activeArchive}`}
+                </span>
+              </p>
+              <button 
+                onClick={() => { setActiveCategory("Semua"); setActiveTag("Semua"); setActiveArchive("Semua Waktu"); }}
+                className="text-[10px] font-black text-red-600 uppercase tracking-widest hover:underline"
+              >
+                Reset Filter
+              </button>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {filteredAllNews.length > 0 ? (
+              filteredAllNews.map((news) => (
+                <article key={news.id} className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-500 flex flex-col">
+                  <div className="relative h-52 overflow-hidden">
+                    <img src={news.featuredImage} alt={news.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-[9px] font-black text-blue-900 uppercase tracking-widest shadow-sm">
+                      {news.category}
+                    </div>
+                  </div>
+                  <div className="p-7 flex-1 flex flex-col">
+                    <div className="flex items-center gap-2 text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-3">
+                      <Calendar size={13} className="text-red-600" />
+                      {news.publishedAt}
+                    </div>
+                    <h3 className="text-md font-bold text-blue-950 mb-3 group-hover:text-red-600 transition-colors line-clamp-2 uppercase leading-tight tracking-tight">
+                      {news.title}
+                    </h3>
+                    <p className="text-slate-500 text-xs line-clamp-3 mb-6 flex-1 leading-relaxed">
+                      {news.excerpt}
+                    </p>
+                    <Link to={`/berita/${news.id}`} className="inline-flex items-center gap-2 text-red-600 font-black text-[10px] uppercase tracking-widest group/btn border-b border-transparent hover:border-red-600 pb-0.5 w-fit transition-all">
+                      Detail Berita 
+                      <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
-                  ))}
-                </div>
-              )}
-            </main>
+                  </div>
+                </article>
+              ))
+            ) : (
+              <div className="col-span-full py-20 text-center">
+                <p className="text-slate-400 italic">Tidak ada berita yang ditemukan dengan filter ini.</p>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-20 text-center">
+            <button className="px-10 py-4 bg-blue-950 text-white font-black rounded-2xl hover:bg-red-600 transition-all shadow-xl shadow-blue-100 uppercase text-[10px] tracking-[0.2em]">
+              Muat Lebih Banyak
+            </button>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default BeritaHomePage;

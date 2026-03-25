@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import { useState } from 'react';
 import DecorativeUnderline from "../ui/decorativeunderline";
 const KehidupanKampusHomePage = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   const facilities = [
     {
       title: "Perpustakaan",
@@ -43,6 +46,7 @@ const KehidupanKampusHomePage = () => {
       desc: "Ruang terbuka inspiratif untuk diskusi santai dan sosialisasi antar civitas akademika.",
     },
   ];
+  
 
   return (
     <section className="bg-white py-24 px-4 overflow-hidden">
@@ -62,25 +66,43 @@ const KehidupanKampusHomePage = () => {
         </div>
 
         {/* --- VIDEO SECTION --- */}
-        <div className="max-w-5xl mx-auto px-4 mb-10">
-          {/* Dekorasi Background */}
-          <div className="absolute -inset-4 bg-blue-900/5 rounded-[3rem] -z-10 scale-95 group-hover:scale-100 transition-transform duration-700"></div>
+<div className="max-w-5xl mx-auto px-4 mb-10 group relative">
+    {/* Dekorasi Background */}
+    <div className="absolute -inset-4 bg-blue-900/5 rounded-[3rem] -z-10 scale-95 group-hover:scale-100 transition-transform duration-700"></div>
 
-          <div className="relative aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
-            {/* Embed Youtube (Ganti ID VIDEO_ID dengan ID video asli) */}
-            <iframe
-              className="w-full h-full"
-              // Tambahkan &mute=1 di sini
-              src="https://www.youtube.com/embed/hTh0QkKxNhg?si=fdX6C7qC375XoMdn&mute=1"
-              title="Campus Tour STTB"
-              // Tambahkan autoplay di dalam allow
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+    <div className="relative aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-black">
+      {!isPlaying ? (
+        // Tampilan Thumbnail Sebelum Play
+        <div 
+          className="relative w-full h-full cursor-pointer group/video"
+          onClick={() => setIsPlaying(true)}
+        >
+          <img 
+            src="https://sttb.ac.id/storage/2022/01/maxresdefault.jpg" 
+            alt="Thumbnail Campus Tour" 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105"
+          />
+          {/* Overlay Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover/video:bg-black/40 transition-colors">
+            <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover/video:scale-110 transition-transform">
+              <svg className="w-10 h-10 text-white fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
           </div>
         </div>
-
-        {/* --- BRIDGING SECTION --- */}
+      ) : (
+        // Iframe Video (Muncul setelah diklik)
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/hTh0QkKxNhg?si=fdX6C7qC375XoMdn&autoplay=1&mute=1"
+          title="Campus Tour STTB"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
+    </div>
+  </div>
         <div className="text-center mb-15">
           <p className="text-gray-500 text-lg max-w-3xl mx-auto leading-relaxed">
             Lebih dari sekadar gedung, setiap ruangan di STTB dirancang untuk

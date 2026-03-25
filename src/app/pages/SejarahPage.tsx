@@ -55,44 +55,17 @@ export default function SejarahPage() {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-transparent py-12 lg:py-20">
-        {/* (Optional) Efek Grid halus untuk tekstur agar tidak terlalu kosong, 
-          tapi tetap putih bersih */}
-        <div
-          className="absolute inset-0 opacity-[0.015] pointer-events-none"
-          style={{
-            backgroundImage:
-              "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E')",
-          }}
-        ></div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            {/* 1. Judul dengan Typography yang diperkuat (Warna Gelap) */}
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 text-red-700">
-              Sejarah{" "}
-              <span className="text-blue-800 relative">
-                STTB
-                <span className="absolute left-0 -bottom-2 w-full h-1 bg-blue-800 rounded-full"></span>
-              </span>
-            </h1>
-
-            {/* 2. Decorative Underline (Center) */}
-            <div className="mb-10 flex justify-center"></div>
-
-            {/* 3. Description dengan Typography yang nyaman (Warna Slate Gelap) */}
-            <p className="text-base lg:text-lg text-slate-700 leading-relaxed max-w-2xl">
+        <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-16 mb-12">
+          <div className="container mx-auto px-4">
+            {/* Title */}
+            <h1 className="text-4xl lg:text-5xl font-bold">Sejarah STTB</h1>
+            <p className="text-xl text-blue-100 mt-4 max-w-3xl">
               Perjalanan STTB sejak tahun 1992 hingga masa kini, membentuk
               generasi pelayan dan pemimpin yang berdampak bagi gereja dan
-              masyarakat.
+              masyarakat.{" "}
             </p>
           </div>
-        </div>
-
-        {/* 5. Bottom Decor: Garis halus penanda batas section (Opsional) */}
-        <div className="absolute bottom-0 left-0 w-full h-px bg-slate-200"></div>
-      </section>
+        </section>
 
       {/* Timeline Section */}
       <section className="py-12 bg-white">
@@ -323,10 +296,6 @@ export default function SejarahPage() {
               </div>
             </div>
 
-            {/* ==========================================================
-          **GARIS PENUNJUK (CONNECTOR LINES)**
-          Hanya muncul di layar besar (lg:)
-          ========================================================== */}
             <div className="hidden lg:block absolute inset-0 z-0 pointer-events-none">
               {/* 1. Garis dari API (Kiri Atas) ke Api di Logo */}
               <div className="absolute top-[25%] left-[28%] w-[15%] h-0.5 bg-red-600/40 rotate-[10deg] origin-left">

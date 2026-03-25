@@ -48,9 +48,7 @@ export default function MagisterMinistriPelayananGerejawiPage() {
     <div className="bg-white">
       <section className="bg-gradient-to-br from-blue-900 to-blue-800 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-blue-200 mb-6">
-            <a href="/" className="hover:text-white transition-colors">Beranda</a><ChevronRight className="w-4 h-4" /><a href="#" className="hover:text-white transition-colors">Akademik</a><ChevronRight className="w-4 h-4" /><span className="text-white">M.Min. Teologi Pelayanan Gerejawi</span>
-          </div>
+
           <h1 className="text-3xl lg:text-4xl font-bold mb-2">Magister Ministri</h1>
           <h2 className="text-2xl lg:text-3xl font-bold text-blue-100 mb-4">Teologi Pelayanan Gerejawi</h2>
           <p className="text-xl text-blue-100 mb-2">M.Min. (Strata 2)</p>

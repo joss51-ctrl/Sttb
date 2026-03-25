@@ -3,75 +3,82 @@
  * Action-oriented modern scholarship information page
  */
 
-import { ChevronRight, Download, CheckCircle, AlertTriangle, Award, Users, TrendingUp } from 'lucide-react';
-import { Button } from '../components/ui/button';
+import {
+  ChevronRight,
+  Download,
+  CheckCircle,
+  AlertTriangle,
+  Award,
+  Users,
+  TrendingUp,
+} from "lucide-react";
+import { Button } from "../components/ui/button";
 
 export default function BeasiswaPage() {
   // Scholarship programs
   const scholarships = [
     {
-      title: 'Pastor Scholar',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+      title: "Pastor Scholar (Beasiswa S1)",
+      image: "https://sttb.ac.id/storage/2022/06/beasiswa-pastor-scholar.png",
       benefits: [
-        'Beasiswa penuh untuk calon pelayan yang telah berpengalaman minimal 3 tahun',
-        'Prioritas untuk pelayanan di daerah terpencil dan frontier',
-        'Mentoring oleh dosen senior selama masa studi'
-      ]
+        "Diperuntukkan bagi mahasiswa S1 dan menjadikan STTB sebagai pilihan pertama",
+        "Beasiswa meliputi biaya pendidikan dari semester 1",
+        "Memiliki prestasi yang menonjol di SMA (rata-rata rapor minimal 8.0)",
+        "Memiliki panggilan yang jelas",
+        "Memiliki rekomendasi yang kuat",
+        "Minimal IPK 2.75 pada semester 1 dan minimal IPK 3.0 pada semester 2-4",
+        "Bersedia mengalokasikan waktu 15 jam/bulan untuk membantu kegiatan administrasi/akademik di STTB",
+        "Kelanjutan beasiswa akan dievaluasi per semester",
+        "Bersedia memenuhi ikatan dinas 0.5 N (setara 2 tahun) setelah mahasiswa lulus",
+      ],
     },
     {
-      title: 'Formatio',
-      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80',
+      title: "Formatio (Beasiswa S1)",
+      image: "https://sttb.ac.id/storage/2022/06/beasiswa-formatio.png",
       benefits: [
-        'Beasiswa berbasis prestasi akademik untuk lulusan SMA/SMK',
-        'Mencakup 50-100% biaya kuliah berdasarkan evaluasi berkala',
-        'Akses ke program pengembangan kepemimpinan khusus'
-      ]
+        "Beasiswa meliputi biaya pendidikan S1 dari tahun kedua atau telah menempuh semester 2",
+        "Memiliki prestasi belajar yang baik serta lolos seleksi dan wawancara",
+        "Kelanjutan beasiswa akan dievaluasi per semester",
+        "Bersedia menyediakan waktu 15 jam/bulan untuk membantu kegiatan administrasi/akademik di STTB",
+        "Bersedia memenuhi ikatan dinas 0.5 N",
+      ],
     },
     {
-      title: 'Transformative Leadership',
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
+      title: "Transformative Leadership (Beasiswa S1-S2) ",
+      image:
+        "https://sttb.ac.id/storage/2022/06/beasiswa-transformative-leadership.png",
       benefits: [
-        'Beasiswa untuk mahasiswa Magister dengan visi transformasi sosial',
-        'Pendampingan riset dan publikasi jurnal internasional',
-        'Networking dengan pemimpin gereja dan organisasi Kristen'
-      ]
-    }
+        "Diperuntukkan bagi mahasiswa S2 dengan prestasi akademik maupun non akademik yang menonjol",
+        "Memiliki integritas dan panggilan yang jelas",
+        "Meliputi maksimal 50% dari total biaya pendidikan",
+        "Memberikan surat keterangan yang menyatakan telah melakukan pelayanan sebanyak 10 jam di pelayanan di lembaga pelayanan atau lembaga domisili setempat",
+        "Bersedia menjadi bagian kepanitiaan acara event STTB dan bersedia menjadi ketua & koordinator kelas",
+        "Tidak diberlakukan ikatan dinas"
+      ],
+    },
   ];
 
   // Requirements and regulations
   const requirements = [
-    'IPK minimal 3.00 (untuk beasiswa prestasi akademik)',
-    'Memiliki surat rekomendasi dari gembala atau pemimpin gereja',
-    'Mengisi formulir pengajuan beasiswa secara lengkap dan benar',
-    'Melampirkan essay motivasi (500-800 kata)',
-    'Menyertakan bukti keaktifan dalam pelayanan gereja/organisasi Kristen',
-    'Lulus seleksi wawancara oleh tim beasiswa STTB',
-    'Bersedia menandatangani surat pernyataan komitmen pelayanan'
+    "IPK minimal 3.00 (untuk beasiswa prestasi akademik)",
+    "Memiliki surat rekomendasi dari gembala atau pemimpin gereja",
+    "Mengisi formulir pengajuan beasiswa secara lengkap dan benar",
+    "Melampirkan essay motivasi (500-800 kata)",
+    "Menyertakan bukti keaktifan dalam pelayanan gereja/organisasi Kristen",
+    "Lulus seleksi wawancara oleh tim beasiswa STTB",
+    "Bersedia menandatangani surat pernyataan komitmen pelayanan",
   ];
 
   const sanctions = [
-    'Pencabutan beasiswa jika IPK di bawah 2.75 selama 2 semester berturut-turut',
-    'Penghentian bantuan jika terbukti memberikan data palsu saat pendaftaran',
-    'Kewajiban mengembalikan dana beasiswa jika mengundurkan diri tanpa alasan kuat',
-    'Peringatan tertulis jika tidak mengikuti program mentoring yang diwajibkan',
-    'Evaluasi ulang jika tidak aktif dalam kegiatan pelayanan kampus'
+    "Pencabutan beasiswa jika IPK di bawah 2.75 selama 2 semester berturut-turut",
+    "Penghentian bantuan jika terbukti memberikan data palsu saat pendaftaran",
+    "Kewajiban mengembalikan dana beasiswa jika mengundurkan diri tanpa alasan kuat",
+    "Peringatan tertulis jika tidak mengikuti program mentoring yang diwajibkan",
+    "Evaluasi ulang jika tidak aktif dalam kegiatan pelayanan kampus",
   ];
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb */}
-      <section className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-blue-900 transition-colors">Beranda</a>
-            <ChevronRight className="w-4 h-4" />
-            <a href="#" className="hover:text-blue-900 transition-colors">Keuangan</a>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 font-medium">Beasiswa</span>
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4 text-center">
@@ -79,7 +86,9 @@ export default function BeasiswaPage() {
             Program Beasiswa
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            STTB berkomitmen untuk mendukung pendidikan teologi berkualitas melalui berbagai program beasiswa bagi calon pemimpin gereja dan masyarakat
+            STTB berkomitmen untuk mendukung pendidikan teologi berkualitas
+            melalui berbagai program beasiswa bagi calon pemimpin gereja dan
+            masyarakat
           </p>
         </div>
       </section>
@@ -90,19 +99,19 @@ export default function BeasiswaPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               {scholarships.map((scholarship, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden"
                 >
                   {/* Image */}
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
+                    <img
                       src={scholarship.image}
                       alt={scholarship.title}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  
+
                   {/* Content */}
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-blue-900 mb-4">
@@ -110,7 +119,10 @@ export default function BeasiswaPage() {
                     </h3>
                     <ul className="space-y-3">
                       {scholarship.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <li
+                          key={idx}
+                          className="flex items-start gap-2 text-sm text-gray-700"
+                        >
                           <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                           <span>{benefit}</span>
                         </li>
@@ -142,7 +154,10 @@ export default function BeasiswaPage() {
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <ul className="space-y-4">
                     {requirements.map((req, index) => (
-                      <li key={index} className="flex items-start gap-3 text-sm text-gray-700">
+                      <li
+                        key={index}
+                        className="flex items-start gap-3 text-sm text-gray-700"
+                      >
                         <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>{req}</span>
                       </li>
@@ -157,14 +172,15 @@ export default function BeasiswaPage() {
                   <div className="w-12 h-12 bg-red-700 rounded-lg flex items-center justify-center">
                     <AlertTriangle className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="text-2xl font-bold text-blue-900">
-                    Sanksi
-                  </h2>
+                  <h2 className="text-2xl font-bold text-blue-900">Sanksi</h2>
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <ul className="space-y-4">
                     {sanctions.map((sanction, index) => (
-                      <li key={index} className="flex items-start gap-3 text-sm text-gray-700">
+                      <li
+                        key={index}
+                        className="flex items-start gap-3 text-sm text-gray-700"
+                      >
                         <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                         <span>{sanction}</span>
                       </li>
@@ -185,16 +201,17 @@ export default function BeasiswaPage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
               Formulir Pengajuan Beasiswa
             </h2>
-            
+
             {/* Supporting Text */}
             <p className="text-lg text-gray-600 mb-10">
-              Silakan unduh formulir pendaftaran beasiswa sesuai jenjang studi Anda.
+              Silakan unduh formulir pendaftaran beasiswa sesuai jenjang studi
+              Anda.
             </p>
 
             {/* Buttons Grid */}
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* S1 Button */}
-              <a 
+              <a
                 href="https://sttb.ac.id/storage/2026/01/Form-Aplikasi-Beasiswa-Baru-S1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -210,7 +227,7 @@ export default function BeasiswaPage() {
               </a>
 
               {/* S2 Button */}
-              <a 
+              <a
                 href="https://sttb.ac.id/storage/2026/01/Form-Aplikasi-Beasiswa-Baru-S2.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -229,9 +246,10 @@ export default function BeasiswaPage() {
             {/* Footer Note */}
             <div className="bg-blue-100 border-l-4 border-blue-600 rounded-r-lg p-4 inline-block">
               <p className="text-sm text-gray-700">
-                <span className="font-semibold text-blue-900">Catatan:</span> Kirimkan kembali formulir yang telah diisi melalui email{' '}
-                <a 
-                  href="mailto:beasiswa@sttb.ac.id" 
+                <span className="font-semibold text-blue-900">Catatan:</span>{" "}
+                Kirimkan kembali formulir yang telah diisi melalui email{" "}
+                <a
+                  href="mailto:beasiswa@sttb.ac.id"
                   className="text-blue-700 font-semibold hover:underline"
                 >
                   beasiswa@sttb.ac.id
@@ -242,78 +260,33 @@ export default function BeasiswaPage() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-2xl font-bold text-blue-900 text-center mb-12">
-              Dampak Program Beasiswa STTB
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Stat 1 */}
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-lg">
-                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-blue-900 mb-2">500+</div>
-                <p className="text-gray-600">Penerima Beasiswa</p>
-                <p className="text-sm text-gray-500 mt-1">Sejak 2015</p>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-lg">
-                <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-blue-900 mb-2">15 M</div>
-                <p className="text-gray-600">Total Dana Beasiswa</p>
-                <p className="text-sm text-gray-500 mt-1">Per Tahun</p>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-lg">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-blue-900 mb-2">85%</div>
-                <p className="text-gray-600">Tingkat Kelulusan</p>
-                <p className="text-sm text-gray-500 mt-1">Penerima Beasiswa</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact CTA */}
-      <section className="py-16 bg-blue-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">
-            Ada Pertanyaan tentang Beasiswa?
-          </h3>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Tim Beasiswa & Kemahasiswaan kami siap membantu Anda dengan informasi lebih lanjut mengenai program beasiswa yang tersedia.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href="https://wa.me/6281234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button 
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white font-bold"
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">
+              Butuh Informasi Lebih Lanjut?
+            </h3>
+            <p className="text-gray-700 mb-8 leading-relaxed">
+              Tim kami siap membantu Anda untuk informasi lebih detail mengenai
+              biaya studi dan program beasiswa.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
               >
                 Hubungi via WhatsApp
-              </Button>
-            </a>
-            <a href="mailto:beasiswa@sttb.ac.id">
-              <Button 
-                size="lg"
-                className="bg-white hover:bg-gray-100 text-blue-900 font-bold"
+              </a>
+              <a
+                href="mailto:keuangan@sttb.ac.id"
+                className="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors"
               >
                 Email Bagian Beasiswa
-              </Button>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </section>

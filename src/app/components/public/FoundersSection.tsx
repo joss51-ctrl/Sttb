@@ -37,9 +37,7 @@ const FoundersSection: React.FC = () => {
                 <img
                   src={founder.image}
                   alt={founder.name}
-                  /* PENTING: 'object-contain' agar tidak zoom, 
-                     'p-4' agar ada ruang napas seperti bingkai foto 
-                  */
+ 
                   className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                 />
                 
